@@ -6,7 +6,7 @@ title: Teaching
 ### Recently Instructed Courses
 
 * COSC 5P07 | Software Performance Engineering\
-  [Winter 2021]({{ site.baseurl }}/tabs/courses/2021/winter/5p07)
+  [Winter 2021]({{ site.baseurl }}/tabs/courses/2021/winter/5p07), [Fall 2022]({{ site.baseurl }}/tabs/courses/2022/fall/5p07)
   
   The study of concepts, techniques, and metrics in software performance engineering before, during, and after software 
   development. This covers performance practices throughout the software development life cycle, performance and scalability 
