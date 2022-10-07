@@ -13,7 +13,7 @@ title: Teaching
   testing and principles of performance evaluation including instrumentation, profiling, measurement, and benchmarking.
 
 * COSC 4P01 | Software Engineering 1\
-  [Fall 2021]({{ site.baseurl }}/tabs/courses/2021/fall/4p01)
+  [Fall 2021]({{ site.baseurl }}/tabs/courses/2021/fall/4p01), [Fall 2022]({{ site.baseurl }}/tabs/courses/2022/fall/4p01)
   
   Theory of software engineering. Topics include plan-driven development, Agile development, software requirements elicitation 
   and presentation, verification of software correctness, redundancy, robustness, safety and security. Creation of robust 
