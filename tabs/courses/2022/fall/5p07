@@ -1,0 +1,39 @@
+---
+layout: page
+title: Software Performance Engineering (COSC 5P07)
+---
+
+#### Course Description
+
+The study of concepts, techniques, and metrics in software performance engineering before, during, and after software development. This 
+covers performance practices throughout the software development life cycle, performance and scalability testing, and principles of 
+performance evaluation including instrumentation, profiling, measurement, and benchmarking.
+
+**Credit Hours**: 36\
+**Location**: Online (MS Teams)\
+**Period**: Sept 9, 2022 to Dec 8, 2022\
+**Time**: Monday: 15:00 to 16:30, Thursday: 15:00 to 16:30
+
+#### Recommended Textbooks
+* Foundations of Software and System Performance Engineering: Process, Performance Modeling, Requirements, Testing, Scalability, and Practice.
+* The Art of Computer Systems Performance Analysis.
+* Performance by Design: Computer Capacity Planning by Example.
+
+#### Tentative Outline
+
+* Review on software engineering
+* Performance engineering
+* Models and methods
+* Queuing Theory
+* Instrumentation and measurement
+* Integration into the software life cycle
+* Performance testing
+* Tools and Case Studies
+* Resource scheduling
+* Data mining
+* Concurrency
+
+#### Office hours 
+* Mondays and Thursdays 10:30 to 11:30 and 16:30 to 17:15
+* Offline questions: by email
+* Online session: by appointment
