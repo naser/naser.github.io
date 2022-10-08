@@ -65,8 +65,8 @@ We also worked on a software project for the Niagara 2022 Canada Summer Games. Y
 ### Recent Publications (2022)
 For the complete list of publications, check my [Google Scholar](https://scholar.google.com/citations?hl=en&user=sJWcLv8AAAAJ&view_op=list_works&sortby=pubdate) 
 profile.
-<!--
-* Raphael Beamonte, Ezzati-Jivan, Naser, and Michel R Dagenais.\
+
+<!-- * Raphael Beamonte, Ezzati-Jivan, Naser, and Michel R Dagenais.\
   Execution trace-based model verification to analyze multicore and real-time systems.\
   Concurrency and Computation: Practice and Experience, **2022**.\
   https://doi.org/10.1002/cpe.69742.
@@ -74,5 +74,4 @@ profile.
 * Majid Rezazadeh, Ezzati-Jivan, Naser, Seyed Vahid Azhari, and Michel R Dagenais.\
   Performance evaluation of complex multi-thread applications through execution path analysis.\
   Elsevier Performance Evaluation, **2022**.\
-  https://doi.org/10.1016/j.peva.2022.102289
--->
+  https://doi.org/10.1016/j.peva.2022.102289 -->
