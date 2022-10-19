@@ -21,14 +21,13 @@ I am particularly interested in operating system level methods, e.g., execution 
 ### Research Projects
 Current research projects:
 
-* Adaptive Execution Tracing and Logging for Resource-Constraint Systems - Funded by Mitacs and NSERC
+* Adaptive Execution Tracing and Logging for Resource-Constrained Systems - Funded by Mitacs and NSERC
 * Power Efficiency of Software Systems for Smart Drones - Funded by VPMI, FedDev, and Bornea Dynamics
 
 We also worked on a software project for the Niagara 2022 Canada Summer Games. You can read about it [here](https://brocku.ca/brock-news/2022/05/canada-games-teaching-spotlight-computer-science-students-developing-canada-games-chatbot/).
 
 ### Research Team
 
-#### Masters Students
 <p></p>
 <style>
     td {
