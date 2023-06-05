@@ -1,0 +1,484 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+%\title{An OS Noise Detection Approach and Root Cause Analysis through Kernel Event Monitoring}
+\title{Detecting OS Noises: A Kernel Event Monitoring Approach for Reliable System Performance\\}
+%"Unveiling the Impact of OS Noises: Root Cause Analysis and Detection through Kernel Event Monitoring"
+%\title{Ensuring Reliable System Performance: Detecting OS Noise and Root Cause Analysis through Kernel Event Monitoring\\}
+%\title{Reliable OS Noise Detection and Root Cause Analysis via Kernel Event Monitoring}
+%\title{Unveiling the Origins: Investigating OS Noise and Ensuring Reliable System Performance through Kernel Event Tracing}
+
+\author{\IEEEauthorblockN{Ben Grandy}
+\IEEEauthorblockA{\textit{Department of Computer Science} \\
+\textit{Brock University}\\
+St. Catharines, Canada \\
+bg16pz@brocku.ca}
+\and
+\IEEEauthorblockN{Morteza Noferesti}
+\IEEEauthorblockA{\textit{Department of Computer Science} \\
+\textit{Brock University}\\
+St. Catharines, Canada \\
+mnoferesti@brocku.ca}
+\and
+\IEEEauthorblockN{Naser Ezzati-Jivan}
+\IEEEauthorblockA{\textit{Department of Computer Science} \\
+\textit{Brock University}\\
+St. Catharines, Canada  \\
+nezzati@brocku.ca}
+}
+
+\maketitle
+
+\begin{abstract}
+Understanding the impact of various OS noises on process performance and resource management presents significant challenges. The presence of diverse noise sources, combined with the multitude of events occurring within the OS, emphasizes the necessity for comprehensive analysis to effectively mitigate the adverse effects of OS noises. This paper introduces an approach based on kernel event monitoring to detect different types of OS noise and identify their root causes. The approach defines and monitors specific metrics on kernel events to detect CPU, Disk I/O, and Network I/O noises. sched\_switches and timer events are employed for monitoring CPU noises, while the duration between block\_rq\_insert and block\_rq\_issue is measured for Disk I/O noise analysis. Similarly, the time delay between events related to network I/O is analyzed to identify potential network noise. The proposed approach's performance in detecting various OS noises is evaluated, confirming its effectiveness through test cases such as the \textit{CPU Noise Test}, \textit{Disk Noise Test}, and \textit{Network Noise Test}. The experimental results demonstrate the efficiency and accuracy of the proposed approach in detecting OS noises through kernel-level event analysis.
+\end{abstract}
+
+\begin{IEEEkeywords}
+OS Noises,
+Process Performance,
+Kernel Event Monitoring,
+Root Cause Analysis,
+Reliability,
+Performance Interference
+\end{IEEEkeywords}
+
+\section{Introduction}
+
+Performance analysis helps optimize the utilization of system resources such as CPU, memory, disk, and network. By identifying resource-intensive operations or inefficient algorithms, software performance analysis allows for improvements that maximize resource utilization, leading to better overall system efficiency. External noises can indeed significantly affect the performance of software~\cite{de2022operating,rameshan2014stay}. Noise (In this paper, we refer to noise instead of using the term "performance noise") refers to non-deterministic and undesired variations or fluctuations in system behavior that have an impact on the expected or desired performance levels. It represents interference or disturbances that introduce random or unpredictable elements, resulting in deviations from the anticipated performance patterns.
+
+One example of noise impacting software performance is network congestion. In a distributed system or client-server architecture, high network traffic or congestion can introduce variations in response times and throughput. This noise can cause delays and affect the overall performance of the software, resulting in slower data transfers, increased latency, and reduced user experience. By analyzing and mitigating the effects of network noise, such as optimizing network protocols or implementing congestion control mechanisms, the performance of the software can be improved.
+
+Noise can manifest in various forms, such as irregular delays, interruptions, or inconsistencies in system response times~\cite{de2022operating}, throughput, resource utilization, or other relevant performance metrics~\cite{akkan2012stepping}. It may result from various factors, such as hardware limitations, contention for shared resources~\cite{casale2011model}, scheduling algorithms~\cite{lameter2009shoot,de2022operating}, external interference~\cite{akkan2013understanding}, or workload variations~\cite{morari2011quantitative}.
+
+Different types of noise root causes, particularly in high-performance computing, demand specific actions to effectively mitigate their impact~\cite{rameshan2014stay,copik2021extracting}. For example, addressing CPU noises may involve optimizing the balance between the number of threads and cores to enhance resource allocation. Similarly, mitigating network noises might require adjustments in traffic shaping or accounting techniques to efficiently manage network load. Conducting root cause analysis plays a crucial role in assisting system administrators in upholding system performance amidst noise. By identifying the underlying causes, administrators can implement targeted solutions to mitigate the effects and ensure optimal performance~\cite{edgar2016system}.
+
+\begin{figure}[tbp]
+  \centerline{\includegraphics[width=0.5\textwidth]{ProcessLifeCycle.pdf}}
+  \caption{Various noises throughout the lifecycle of a process can have a significant impact on its performance.}
+  \label{processlifecycle}
+\end{figure}
+
+The performance of a process can be significantly affected by various noises throughout its lifecycle. Fig.~\ref{processlifecycle}. illustrates a typical system where the lifecycle of \textit{Process 1} is influenced by different processes~\cite{processlifecyclerefrences}. When \textit{Process 1} enters the \textit{TASK\_READY} state, its performance can be impacted by interruptions from the task scheduler. As the CPU is shared among all processes, the task scheduler\'s dispatch and allocation of the CPU can influence the performance of \textit{Process 1}. Similarly, when the process transitions to the \textit{TASK\_WAITING} state, its performance can be influenced by other processes. If there is an extensive load on shared resources such as disk, network, or other external devices, it can adversely affect the performance of \textit{Process 1}. Conducting a root cause analysis of the noises affecting \textit{Process 1}\'s performance is essential to identify and mitigate these issues, ultimately achieving optimal performance.
+
+Kernel event tracing is a technique utilized to monitor and capture low-level events occurring within the kernel of an operating system~\cite{woodside2020issues}. It involves tracing and recording a diverse range of events, including interrupts, system calls, scheduler events, disk I/O operations, and network activities~\cite{performancetracing}. By exploring these events, kernel event tracing enables the detection of noise and facilitates root cause analysis. However, effectively analyzing a substantial volume of kernel-level events poses a significant challenge when applying noise detection and root cause analysis. Furthermore, accurately processing complex events generated at the kernel level are imperative for pinpointing the precise root causes of the observed noises. 
+
+In this paper, we address the significant challenges in understanding the impact of different OS noises on process performance and resource management. The presence of diverse noise sources and the multitude of events within the OS highlights the need for comprehensive analysis to effectively mitigate the adverse effects of OS noises. To address this, we propose an approach based on kernel event monitoring that enables the detection of various types of OS noise and the identification of their root causes. Our approach defines and monitors specific metrics on kernel events to detect CPU, Disk I/O, and Network I/O noises. For CPU noise analysis, we employ sched\_switches and timer events, while Disk I/O noise is assessed by measuring the duration between block\_rq\_insert and block\_rq\_issue. Additionally, network noise is identified by analyzing the time delay between events related to the network I/O. We evaluate the performance of our approach in detecting different OS noises, confirming its effectiveness through test cases such as the \textit{CPU Noise Test}, \textit{Disk Noise Test}, and \textit{Network Noise Test}. The experimental results demonstrate the efficiency and accuracy of our proposed approach in detecting OS noises through kernel-level event analysis.
+
+The contributions of this paper are as follows:
+\begin{enumerate}
+    \item Proposal of a framework for noise detection and root cause analysis through kernel-level event analysis.
+    \item Introduction of the "Disk Analyzing" technique, which leverages disk-related events, such as block\_rq events, to detect noises associated with disk behavior. 
+    \item Definition of the "CPU Analyzing" technique, which monitors various CPU events to detect noises related to CPU usage.
+    \item Definition of the "Network Analyzing" technique, which monitors different network-related events to detect noises associated with network behavior.
+    \item The \textit{CPU Noise Test}, \textit{Disk Noise Test}, and \textit{Network Noise Test} were designed to showcase the capability of our approach in accurately identifying the underlying sources of noise in each respective domain.
+\end{enumerate}
+
+The remaining sections of this paper are organized as follows: Section~\ref{relatedsection} provides a review of related works in the field of noise detection and root cause analysis. Section~\ref{noisesection} presents the details of the proposed approach for noise detection and root cause analysis through kernel event monitoring. In Section~\ref{evaluationsection}, the effectiveness of the proposed approach is evaluated through \textit{CPU Noise Test}, \textit{Disk Noise Test}, and \textit{Network Noise Test} use cases. Finally, Section~\ref{conclusionsection} concludes the paper and discusses potential avenues for future research.
+
+\section{Related works}\label{relatedsection}
+
+\begin{table*}[tb]
+\caption{Noise detection approaches and different root causes.}
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccl}
+\hline \hline 
+Name & \textit{IRQ noise} & \textit{CPU noise} & \textit{Disk noise} &  \textit{Network noise} &  \textit{Analyzing method} \\\hline 
+Edgar et al.~\cite{edgar2016system} & $\surd$& $\surd$ & $-$  & $-$  & Monitoring CPU on distrbuted environment\\ 
+Lameter in~\cite{lameter2009shoot} & $-$ & $\surd$ & $-$ & $-$  & Monitoring OS scheduling policy\\ 
+Hakan et al. \cite{akkan2012stepping}& $\surd$& $\surd$  & $-$ & $-$  & Monitoring the adverse impact of OS clock\\ 
+Hakan et al.~\cite{akkan2013understanding} & $\surd$ & $\surd$ & $-$ & $-$  & Monitoring preemption caused by task scheduling\\ 
+Nelson et al. in~\cite{gonzalez2017jitter}  & $\surd$& $\surd$ & $-$ & $-$  & Monitoring Linux scheduler activity \\ 
+Daniel Bristot et al.~\cite{de2022operating}& $\surd$  & $\surd$ & $-$  & $-$  & Kernel tracing to measure CPU-related noise\\ 
+The proposed approach & $\surd$ & $\surd$ & $\surd$  & $\surd$  & multiple analysis on system-level execution traces\\ 
+\hline \hline 
+\end{tabular}
+}
+\label{tbl:noisemainissueschallenges}
+\end{table*}
+
+Numerous studies have been conducted to explore and tackle the complexities of performance noise detection. Considering the impact of noise on scalability and performance in a distributed environment, Edgar et al.~\cite{edgar2016system} proposed an approach that utilizes Simultaneous Multi-Threading (SMT) to isolate applications from system interference, requiring no modifications to the operating system or the application itself. Instead of eliminating noise, their approach relocates it away from the critical path. By leveraging SMT, which enables multiple hardware threads per core, the method effectively mitigates noise and protects applications from system interference. Unlike core specialization, where specific cores are dedicated to system processing, this approach maximizes the utilization of all cores within a node for application execution. The results have demonstrated significant performance improvements, including a maximum enhancement of 2.4 times for a high-order finite elements shock hydrodynamics application. 
+
+In latency-sensitive applications, the interference from the operating system (OS) can significantly affect performance. Lameter in~\cite{lameter2009shoot} defines OS noise as disturbances caused by the OS utilizing a processor, resulting from activities such as scheduling, interrupts, timers, and other events. These disturbances introduce delays and variations in execution time in user space processing. The Linux kernel, with its expanding range of features, contributes to this noise. To mitigate OS noise and enhance latency, additional measures beyond real-time scheduling policies (such as round robin and FIFO) are required.
+
+Scientific applications often face interruptions from the operating system, despite the availability of multiple cores. Traditional task scheduling in Linux is not optimized for high-performance computing scenarios where a single job utilizes all cores. In \cite{akkan2012stepping}, Hakan et al. investigate a soft-partitioning approach to isolate application processes from the operating system. They explore various methods, including configuration changes and invasive code modifications, to reduce interruptions caused by the operating system, particularly by leveraging CPU affinity settings. The experimental results demonstrate that even at small scales, parallel applications benefit from these modifications, showing a 1.72\% improvement. The research underscores the adverse impact of OS clock ticks on scalability and highlights the potential to achieve a noise-free system using a widely used commodity operating system.
+
+In another study conducted by Hakan et al.~\cite{akkan2013understanding} , the focus is on mitigating application interruptions by utilizing compile and run-time configurations within an unmodified Linux kernel. The authors also introduce an invasive approach that effectively eliminates involuntary preemption caused by task scheduling. Through experiments, they observe a 1.91\% performance improvement in parallel applications, even at smaller scales. These findings highlight the potential benefits of optimizing system configurations and minimizing interruptions to enhance application performance.
+
+Nelson et al. in~\cite{gonzalez2017jitter} addresses the issue of Operating System (OS) noise, which can adversely affect the scalability of large-scale parallel applications. The authors present Jitter-Trace, a tool built on top of Linux Perf, that identifies and quantifies jitter sources in the OS. By analyzing the Linux scheduler activity, Jitter-Trace tracks the processes associated with the application and records jitter events when an application process is switched out for a system activity. The collected data provides task profiles and histograms of OS noise, enabling the identification of noise sources and the implementation of mitigation strategies. Jitter-Trace offers a low-overhead solution as it leverages the tracing and profiling capabilities of Linux Perf without requiring modifications to the kernel or the application. 
+
+
+%Yasaman et al.~\cite{amannejad2015detecting} conducted research on the impact of virtualization technologies in web services relying on public cloud platforms. They proposed a machine learning-based interference detection technique to address the contention issues among virtual machines for shared physical machine resources. The technique utilized collaborative filtering and a Collaborative Response time Estimation module to estimate reference response times for transactions. By comparing the reference response time with the actual response time, interference detection was achieved. The researchers collected historical data from the production environment and evaluated their approach using a realistic web benchmark. The results showed that the most effective variant of their technique detected approximately 96\% of performance interference events with minimal false alarms. This research highlights the effectiveness of machine learning in detecting and managing interference in cloud-based web services.
+
+
+Linux, with its real-time kernel options and advanced CPU isolation features, is increasingly important in Network Function Virtualization architecture, enabling low latency networked services. However, tuning Linux for these applications is challenging and requires a deep understanding of its execution model and tracing features. In~\cite{de2022operating}, Daniel Bristot et al. explore the internal aspects of Linux that affect Operating System Noise (OS noise) from a timing perspective. They focus on CPU-related noise and define OS noise as the time spent by a CPU executing instructions not belonging to the assigned application task while the task is ready to run. The authors introduce "osnoise," an in-kernel tracer that measures and traces OS noise as observed by workloads, facilitating system analysis and debugging. The paper presents experiments demonstrating Linux's ability to deliver low OS noise and the effectiveness of osnoise in identifying the root causes of timing-related OS noise problems.
+
+The paper focuses on the current state of noise analysis, which involves developing new heuristics to identify performance noise within a specific range of observable behavior. It introduces an approach for noise detection and root cause analysis based on system-level execution tracing. By analyzing low-level events, the approach enables efficient and transparent monitoring of system behavior. The proposed approach utilizes a three-module architecture with three analysis techniques dedicated to detecting CPU, disk, and memory noises. The effectiveness of the approach in noise detection is evaluated through multiple test cases.
+
+
+Table~\ref{tbl:noisemainissueschallenges} summarizes different noise detection approaches and the scopes of observable noise they analyze. Previous approaches have primarily focused on CPU-related noises that are specifically generated by the OS scheduler. However, the proposed approach aims to detect noise across all scopes by analyzing system-level execution traces. The table includes the names of the approaches, along with checkboxes indicating whether they analyze CPU noise, disk noise, and network noise. The proposed approach is highlighted as it analyzes all of these noise scopes using multiple analysis techniques on system-level execution traces.
+
+
+
+\section{The proposed approach}\label{noisesection}
+
+This section outlines the details of an approach for noise detection and root cause analysis using system-level execution. The proposed approach involves collecting events generated by the software and processing them through multiple analysis methods to detect noises across different scopes.
+
+\begin{figure}[tbp]
+  \centerline{\includegraphics[width=0.5\textwidth]{Architecture.pdf}}
+  \caption{The architecture of the proposed approach.}
+  \label{architecture}
+\end{figure}
+
+The proposed approach architecture is illustrated in Fig.~\ref{architecture}. It consists of four main modules: \textit{Event Gathering}, \textit{Trace Handler}, \textit{Noise and Root Cause Detector}, and \textit{Visualization}. The \textit{Event Gathering} module collects kernel-level events generated by the software to detect noise. These events are gathered with low overhead and without interfering with the software behavior. The \textit{Trace Handler} module manages the events and creates traces that are associated with the same execution. Different analysis methods are employed in the \textit{Noise and Root Cause Detector} module to detect noise and determine its root cause across various analyzing scopes, including \textit{Disk Monitoring}, \textit{CPU Monitoring}, and \textit{Network Monitoring}. Finally, the \textit{Visualization} module presents noise detection metrics in a visual format, aiding system administrators in understanding the details of the noise and identifying mitigation strategies. The following sub-sections provide further details on each of the proposed modules.
+
+\subsection{Event Gathering module}
+
+During the execution of the software, there are numerous interactions between the operating system and the software itself. To detect noise without interference, the proposed approach captures events occurring between the operating system and the software. This is achieved through the \textit{Event Gathering} module, which utilizes an open-source tracing tool called LTTng (Linux Tracing Toolkit: next generation)~\cite{LTTng}. LTTng is known for its low overhead and scalability, making it suitable for tracing both the Linux kernel and userspace. It provides an easy-to-use interface, efficient memory usage, and precise timestamps across multiple processors, ensuring accurate noise detection without significant interference or performance impact.
+
+The \textit{Event Gathering} module is responsible for handling the high volume and diverse nature of events generated at the kernel level. Figure~\ref{eventpic} illustrates the events that occur during software execution, each defined by attributes such as Timestamp, CPU, event type (e.g., system call, interrupt), event details (e.g., IP address), process ID, and thread ID. To collect the necessary attributes, the module utilizes tracepoints, which are hooks placed in the code that allow function probes to attach at runtime. When a tracepoint is reached, the probe is executed within the caller's context, and control returns to the caller after probe execution. By strategically placing tracepoints in Linux subsystems, valuable runtime information can be extracted. For instance, the \texttt{sched\_switch} tracepoint indicates when one thread is replaced by another on a CPU, providing insights into the scheduling behavior of the Linux scheduler subsystem.
+
+\begin{figure}[tbp]
+  \centerline{\includegraphics[width=0.5\textwidth]{events.png}}
+  \caption{\textit{Event Gathering} module - Collection of events and attributes}
+  \label{eventpic}
+\end{figure}
+
+
+Multiple tracepoints and their corresponding recorded events are enabled in the \textit{Event Gathering} module, including the following:
+\begin{itemize}
+  \item\texttt{sched\_switch}: Records events when a thread is switched from running on one CPU to another.
+  \item\texttt{irq\_handler\_entry} and \texttt{irq\_handler\_exit}: Record events when an interrupt handler starts and finishes execution.
+  \item\texttt{block\_rq\_insert}: Records events when a request is inserted into the block I/O request queue.
+  \item\texttt{block\_rq\_complete}: Records events when a block I/O request is completed.
+  \item\texttt{netif\_receive\_skb}: Records events when a network interface receives a new socket buffer.
+\end{itemize}
+These tracepoints allow the collection of specific events related to thread scheduling, interrupt handling, block I/O requests, and network interface activity. By enabling these tracepoints, the \textit{Event Gathering} module can extract the necessary metrics for noise detection and root cause analysis.
+
+\subsection{Trace Handler module}
+The \textit{Trace Handler} module is responsible for constructing the necessary relationships among events collected by the \textit{Event Gathering} module. It analyzes the event stream, identifies causal patterns, and establishes temporal and logical dependencies between events. By understanding the order of events and extracting relevant metrics, such as the block queue and network queue waiting times, the \textit{Trace Handler} module enables effective noise detection and root cause analysis techniques. It provides the necessary context and insights to analyze system behaviors and identify potential sources of noise.
+
+
+To handle the stream of kernel events, the \textit{Trace Handler} module is responsible for maintaining the sequence of required events for each process. Considering a multi-threaded application $P$, it is represented as a set $P=\{ES^k | 1\leq k \leq m\}$, where each event sequence $ES^k$ represents a sequence of events $<e^k_1, e^k_2, ..., e^k_l>$ generated during the runtime of $P$ by the same thread. It should be noted that the timestamp of event $e^k_i$ always precedes the timestamp of event $e^k_j$, for all $i \leq j$, ensuring the chronological order of events within the event sequence $ES^k$. Additionally, all events in the event sequence $ES^k$ belong to the same thread of the process $P$. By analyzing the event attributes such as timestamp, PID, and TID, the $Trace Handler$ module generates and organizes the sequence of events for each process, enabling further analysis and processing.
+
+
+Let's consider a scenario where a process initiates a disk I/O operation, which involves a collection of events within the operating system, including system calls, interrupts, and function calls. The process goes through a series of events to complete the disk I/O operation. It starts with the \texttt{block\_getrq} event, which represents the acquisition of a request for the disk I/O operation. Following that, the request is inserted into the waiting queue using the $block\_rq\_insert$ event. Subsequently, the request is issued to the driver for processing through the $block\_rq\_issue$ event. If the disk successfully processes the request, the $block\_rq\_complete$ event is triggered, indicating the completion of the operation. This event releases the request data structure and awakens any blocked processes. The \textit{Trace Handler} module organizes these events into a sequence $\langle$\texttt{block\_getrq}, \texttt{block\_rq\_insert}, \texttt{block\_rq\_issue}, \texttt{block\_rq\_complete}$\rangle$ sorted based on the timestamp of the events. Furthermore, the \textit{Trace Handler} module ensures that these events are associated with the same thread of the same program, maintaining their relationship. These sequences, along with other sequences generated during the runtime of the process, are then sent to the \textit{Noise and Root Cause Detector} module for noise detection and root cause analysis.
+
+
+\subsection{Noise and Root Cause Detector}
+
+To effectively detect noise and determine the root cause of performance issues, the Noise and Root Cause Detector module incorporates three distinct analyses: \textit{CPU Analyzing}, \textit{Network Analyzing}, \textit{Disk Analyzing}, and \textit{IRQ Analyzing}.
+
+
+\subsubsection{CPU Analyzing}
+For CPU noise monitoring, \textit{CPU Analyzing} component calculates the number of \texttt{sched\_switch} events and the duration between them. The \texttt{sched\_switch} event occurs when the CPU switches from executing one process (or thread) to another, indicating a change in the active execution context. A large number of \texttt{sched\_switch} events indicates that the system has a high number of tasks and the processor switches frequently between them. This can be an indication of CPU noise, where the system is constantly switching between different processes, potentially impacting overall system performance.
+
+On the other hand, analyzing the duration between \texttt{sched\_switch} events and is \texttt{sched\_wakeup} events is also important. The \texttt{sched\_wakeup} event refers to the event where a task or thread in a system is awakened or signaled to start executing by the scheduler. The duration between a \texttt{sched\_wakeup} event and a \texttt{sched\_switch} event represents the time it takes for a task to be awakened and actually scheduled to run on a CPU. In a noisy system, this duration may increase due to the increased number of processes waiting for CPU time. To monitor CPU noise, the proposed approach defines the \textit{CPU\_Wait\_Time} metric, which is calculated using Equation ~\ref{cpunoisemetric} $sched\_switch^i_t$ and $sched\_wakeup^i_t$ indicates the time stamp of i-th occurrence of those events. 
+
+\begin{equation}\label{cpunoisemetric}\begin{array}{l}
+CPU\_Wait\_Time^i= \\sched\_switch^i_t - sched\_wakeup^i_t
+\end{array}
+\end{equation}
+
+\subsubsection{Network Analyzing}
+The Network Analyzing component is responsible for monitoring the network activities of the software. It captures and analyzes network-related events, such as network packets, socket operations, and network protocol activities. This analysis helps identify network noises, such as network congestion, packet loss, or delays in network communication.
+
+\begin{figure}[tbp]
+	\begin{subfigure}[b]{1\linewidth}
+		\centering
+		\includegraphics[width=\textwidth]{wgetcritical.png}
+  	\caption{The start of transmission request when \texttt{net\_dev\_queue} is followed by \texttt{irq\_softirq\_entry}.}
+        \label{critical1}
+	\end{subfigure}\hfill
+	\begin{subfigure}[b]{1\linewidth}
+		\centering
+		\includegraphics[width=\textwidth]{wgetcritical.png}
+            \caption{The completion of the \texttt{NETWORK} state when \texttt{net\_if\_receive\_skb} is followed by \texttt{sched\_waking}.}
+            \label{critical2}
+	\end{subfigure}
+	\caption{The critical path of \textit{wget} in a non-noisy network.}
+\end{figure}
+
+To monitor network noises, the proposed approach calculates metrics related to the send queue and to the receive queue. To explain the metrics, let's consider the critical path of a simple \textit{wget} program trying to download a website, as depicted in Fig.~\ref{critical1}. In the figure, the green color represents the \textit{wget} process in the \texttt{RUNNING} state, and the pink color indicates the \texttt{NETWORK} state. Before the \textit{NETWORK} state begins, there is a \texttt{net\_dev\_queue} event. The tracepoint \texttt{net\_dev\_queue} records events when a network device queues a packet for transmission. In the absence of noise, we expect to see another event, \texttt{irq\_softirq\_entry}, in close proximity to this event, with the same process ID (PID) and thread ID (TID). The \texttt{irq\_softirq\_entry} tracepoint captures events when a software interrupt or softirq is triggered, providing information about the interrupt or softirq being processed. In simple terms, the occurrence of \texttt{irq\_softirq\_entry} indicates that the packet is being sent. However, if there is noise present, the duration between the \texttt{net\_dev\_queue} and \texttt{irq\_softirq\_entry} events becomes longer, indicating delays or disruptions in the packet transmission process. 
+
+
+The completion of the NETWORK state is depicted in Fig.\ref{critical2}. The \texttt{sched\_waking} event occurs when a thread is awakened and scheduled to run on a CPU (indicated by the thread transitioning to the \texttt{PREEMPTED} state, shown in orange in the critical path view). In the context of network noise analysis, when the \texttt{net\_if\_receive\_skb} event, which indicates the reception of a network packet by the network interface card, is immediately followed by the \texttt{sched\_waking} event, it signifies the completion of the NETWORK state in a non-noisy network.
+
+Considering $irq\_softirq\_entry^i_t$ and $net\_dev\_queue^i_t$ as the time stamp of i-th occurance of \texttt{irq\_softirq\_entry} and \texttt{net\_dev\_queue} respectively, the transmission wait time, denoted by $Trs\_Wait\_Time$ is calculated by Equation~\ref{netsend}. The receive wait time, denoted by $Rcv\_Wait\_Time$is calculated by Equation~\ref{netrcv}. By monitoring these durations, the proposed approach can detect network noises and evaluate their impact on the critical path of network-related tasks.
+
+\begin{equation}\label{netsend}\begin{array}{l}
+Trs\_Wait\_Time^i= \\irq\_softirq\_entry^i_t - net\_dev\_queue^i_t
+\end{array}
+\end{equation}
+\begin{equation}\label{netrcv}\begin{array}{l}
+Rcv\_Wait\_Time^i= \\sched\_waking^i_t - net\_if\_receive\_skb^i_t
+\end{array}
+\end{equation}
+
+
+\subsubsection{Disk Analyzing}
+The \textit{Disk Analyzing} technique focuses on monitoring the disk I/O operations performed by the software. It captures events related to disk read and write operations, disk queues, and disk latency. By analyzing these events, it can detect disk-related noises, such as high disk utilization, long disk queues, or slow disk access times.
+
+In the context of disk I/O operations, various events are related to capturing different stages and aspects of the operation. As mentioned in the paper by Daoud et al.~\cite{daoud2018recovering}, the \texttt{block\_getrq} event indicates that the software requires a specific disk block for its I/O operation. This event is followed by other events in the disk I/O sequence, including \texttt{block\_rq\_insert}, \texttt{block\_rq\_issue}, and \texttt{block\_rq\_complete}, which collectively represent the complete lifecycle of the disk I/O operation.
+
+These generated events provide valuable insights into different noise problems that can occur during disk I/O operations. For example, if there is external noise affecting the disk, there may be a significant time interval between the \texttt{block\_rq\_issue} and \texttt{block\_rq\_complete} events, indicating delays in the completion of the I/O operation. On the other hand, if another process is generating an excessive number of hard requests, it can lead to a consistently busy \texttt{WAITING} queue in the driver, resulting in an increase in the time between the \texttt{block\_rq\_insert} and \texttt{block\_rq\_issue} events.
+
+To effectively monitor and analyze noise problems caused by disk I/O operations, the \textit{Disk Analysis} component defines two metrics that monitor requests in the $Block\_Queue$ and $Disk\_Queue$. The $Block\_Queue$ consists of requests that have encountered the \texttt{block\_rq\_insert} event but have not yet encountered the subsequent \texttt{block\_rq\_issue} event. Similarly, the $Disk\_Queue$ comprises requests that have encountered the \texttt{block\_rq\_issue} event but have not yet encountered the \texttt{block\_rq\_complete} event.
+
+To calculate the waiting time for both queues, the Equation~\ref{block1} and Equation~\ref{block2} are defined:
+\begin{equation}\label{block1}\begin{array}{l}
+Block\_Wait\_Time^i=\\block\_rq\_issue^i_t - block\_rq\_insert^i_t
+\end{array}
+\end{equation}
+\begin{equation}\label{block2}\begin{array}{l}
+Disk\_Wait\_Time^i=\\block\_rq\_complete^i_t - block\_rq\_issue^i_t
+\end{array}
+\end{equation}
+Where $block\_rq\_issue^i_t$, $block\_rq\_insert^i_t$, and $block\_rq\_complete^i_t$ represent the timestamps of related events for the same thread in the same process. The metrics $Block\_Wait\_Time$ and $Disk\_Wait\_Time$ are designed to measure and track various aspects of the I/O noise related to disk activity or process activity inside the system. By monitoring these metrics and analyzing the corresponding events, the \textit{Noise and Root Cause Detector} module can detect and identify issues related to disk I/O performance and assist in root cause analysis.
+
+\subsubsection{IRQ Analyzing}
+
+The \textit{IRQ Analyzing} technique focuses on monitoring interrupt noises during software execution. It captures events related to interrupt handling, specifically \texttt{irq\_handler\_entry} and \texttt{irq\_handler\_exit}. The \texttt{irq\_handler\_entry} event occurs when an interrupt request (IRQ) handler begins its execution. When a hardware device generates an interrupt, the CPU interrupts its current execution and jumps to the corresponding IRQ handler routine. This event marks the entry point of the handler, where the specific IRQ is being serviced. Monitoring and analyzing \texttt{irq\_handler\_entry} events are important for understanding the timing and behavior of interrupt handling in a system.
+
+On the other hand, the \texttt{irq\_handler\_exit} event is the counterpart of the \texttt{irq\_handler\_entry} event in interrupt handling. It signifies the completion of the execution of an IRQ handler. After the handler has finished processing the interrupt, the CPU resumes its previous execution at the point where it was interrupted. The \texttt{irq\_handler\_exit} event is crucial for measuring the duration of IRQ handling and gaining insights into the overall performance of interrupt handling in a system.
+
+
+The \textit{IRQ Analyzing} technique calculates the \textit{IRQ\_Wait\_Time} as the duration between the \texttt{irq\_handler\_entry} and \texttt{irq\_handler\_exit} events. The specific equation used for this calculation, referred to as Equation~\ref{irq}, Where $irq_handler_entry^i_t$ and $irq_handler_exit^i_t$represent the timestamps of related events for the same thread in the same process. 
+\begin{equation}\label{irq}\begin{array}{l}
+IRQ\_Wait\_Time^i=\\irq\_handler\_exit^i_t - irq\_handler\_entry^i_t
+\end{array}
+\end{equation}
+
+
+\begin{figure*}[tbp]
+  \centerline{\includegraphics[width=0.95\textwidth]{VisualizerNetIO.png}}
+  \caption{\textit{Visualizer} module - \textit{Network Noise} view}
+  \label{netview}
+\end{figure*}
+
+\begin{figure*}[tbp]
+  \centerline{\includegraphics[width=0.95\textwidth]{VisualizerDiskIO.png}}
+  \caption{\textit{Visualizer} module - \textit{Disk Noise} view}
+  \label{diskview}
+\end{figure*}
+\begin{figure}[tbp]
+	\begin{subfigure}[b]{1\linewidth}
+		\centering
+		\includegraphics[width=\textwidth]{VisualizerIRQOverview.png}
+  	\caption{The IRQ noise behavior overview.}
+        \label{VisualizerIRQOverview}
+	\end{subfigure}\hfill
+	\begin{subfigure}[b]{1\linewidth}
+		\centering
+		\includegraphics[width=\textwidth]{visualizerIRQCloseup.png}
+            \caption{Closeup to the IRQ behavior.}
+            \label{visualizerIRQCloseup}
+	\end{subfigure}
+	\caption{\textit{Visualizer} module - \textit{IRQ Noise} view}
+\end{figure}
+
+\subsection{Visualization module}
+
+The \textit{Visualizer module} utilizes the open-source trace analysis software Trace Compass~\cite{TraceCompass} to provide graphical views that highlight noise in the process execution for system administrators. Trace Compass is a powerful performance analysis and visualization tool designed for importing and analyzing trace data, including system, kernel, and application traces. It offers a user-friendly graphical interface with a range of analysis capabilities, including event correlation, latency analysis, and resource utilization analysis, enabling users to identify performance bottlenecks and diagnose issues.
+
+In the context of the \textit{Visualizer module}, views in Trace Compass represent graphical representations of isolated events extracted from the state system, which is a core component of the Trace Compass framework. Leveraging the TMF (Trace Compass Trace and Log Analysis Framework), the \textit{Visualizer module} introduces three specific noise views: \textit{Network Noise}, \textit{Disk Noise}, and \textit{IRQ Noise}. These views enable system administrators to detect and analyze different types of noise, such as interrupt-related noise, disk I/O noise, and network noise. By examining these views and analyzing the corresponding events, administrators can gain deeper insights into the noise sources, identify root causes, and make informed decisions to optimize system performance.
+
+
+
+
+\subsubsection{Network Noise view}
+The \textit{Network Noise} view provides a graphical representation of network activity and the associated thread IDs. In the view, different colors are used to differentiate between threads, and each color is accompanied by a thread ID number. The horizontal bars on the graph represent specific events related to network communication. The first horizontal bar indicates when the network wants to send a message. This bar shows the \textit{Trs\_Wait\_Time} metric and starts at the beginning of the \texttt{net\_dev\_queue} event and ends at the occurrence of the \texttt{soft\_irq\_entry} event. The second horizontal bar, monitors the \textit{Rcv\_Wait\_Time} metric and represent when the network device receives a packet and the corresponding thread gets woken up. The \texttt{net\_if\_receive\_skb} event marks the start of this bar, and it continues until the \texttt{sched\_waking} event occurs. By analyzing the Network Noise view, system administrators can identify patterns and anomalies in network activity. For example, in Fig.~\ref{netview}, thread ID 24171 is shown to be waiting for a long time to send a packet, indicating potential network noise or performance issues.
+
+\subsubsection{Disk Noise view}
+The \textit{Disk Noise} view in the \textit{Visualizer} module visualizes the noise detection metrics for disk I/O operations, focusing on the \textit{Block\_Wait\_Time} and \textit{Disk\_Wait\_Time}. These metrics monitor the time intervals between the \texttt{block\_rq\_insert}, \texttt{block\_rq\_issue}, and \texttt{block\_rq\_complete} events in the disk operation lifecycle. Fig.~\ref{diskview} illustrates the Disk Noise view, utilizing different colors to represent these metrics for different thread IDs and providing a visual representation of the noise in disk activity. The view displays the monitored wait times for each disk in the system, with disk number five being the primary focus in the given example. The figure highlights an increase in wait times for thread ID 228047368, indicating a disk-related performance noise.
+
+
+
+\subsubsection{IRQ Noise view}
+The IRQ Noise view illustrates the $IRQ\_Wait\_Time$ metric, which measures the duration between \texttt{irq\_handler\_entry} and \texttt{irq\_handler\_exit} events. Fig.~\ref{VisualizerIRQOverview} provides an overview of the view, where horizontal bars represent different IRQs, and the colored sections within the bars depict the waiting time of thread IDs for the corresponding IRQs. In the overall view, the IRQ noise may not be immediately apparent, but system administrators can zoom in and explore individual lines to identify interesting IRQ wait times for different IRQs. For example, Fig.~\ref{visualizerIRQCloseup} highlights that TID 1846 and TID 1847 experienced long wait times for IRQ 18 and IRQ 19, respectively.
+
+
+
+\subsubsection{CPU Noise view}
+
+The CPU noise view, as proposed, is designed to monitor the duration between \textit{sched\_switch} and \textit{sched\_wakeup} events. This metric is depicted in Fig.~\ref{cpunoiseview}. In this view, each vertical bar represents a thread, while the horizontal segments within the bar represent the duration between these events. Another valuable view in Trace Compass is the \textit{Critical Path} view, which visualizes the occurrences of delays or blocks during execution. Fig.~\ref{CriticalPathCPU} demonstrates the difference between a process in a noise-free and a noisy environment. When CPU noise occurs, the Critical Path view reveals that numerous CPU switches take place within the critical path of the process. This suggests that CPU noise significantly impacts the performance of the system. These two views, the \textit{Control Flow} view and the \textit{Critical Path} view, enable users to analyze CPU performance noise and gain a deeper understanding of the effects on system execution.
+
+
+\begin{figure}[tbp]
+  \centerline{\includegraphics[width=0.5\textwidth]{cpunoiseview2.png}}
+  \caption{\textit{Visualizer} module - \textit{CPU Noise} view}
+  \label{cpunoiseview}
+\end{figure}
+
+\begin{figure}[tbp]
+	\begin{subfigure}[b]{1\linewidth}
+		\centering
+		\includegraphics[width=\textwidth]{CriticalPathCPUMainApp.png}
+  	\caption{The noise-free environment.}
+        \label{CriticalPathCPUMainApp}
+	\end{subfigure}\hfill
+	\begin{subfigure}[b]{1\linewidth}
+		\centering
+		\includegraphics[width=\textwidth]{CriticalPathCPUProblemArea.png}
+            \caption{The noisy system.}
+            \label{CriticalPathCPUProblemArea}
+	\end{subfigure}
+    \caption{The \textit{Visualizer} module utilizes the Critical Path view to showcase CPU noise.}
+    \label{CriticalPathCPU}
+\end{figure}
+
+
+\section{Evaluation}\label{evaluationsection}
+
+In order to validate the proposed approach, we conducted several test cases to examine how it detects different types of performance noises. These test cases include:
+\begin{itemize}
+    \item The \textit{Network Noise Test-case}: This test case simulates a network noise environment where various network activities generate excessive traffic or delays. The goal is to assess how well the proposed approach can detect and analyze network-related performance noises.
+    \item The \textit{Disk Noise Test-case}: This test case focuses on noise in disk operations, such as high disk queue wait times or prolonged block queue wait times.
+    \item The \textit{CPU Noise Test-case}: This test case aims to evaluate the approach's ability to detect and analyze CPU noise. It involves scenarios where the CPU is heavily loaded, or experiences frequent context switches.
+\end{itemize}
+
+Through these test cases, we evaluate the proposed approach's usefulness and efficiency in detecting and diagnosing different types of performance noises. 
+
+\subsection{Experimental Setup}
+
+All the experiments were conducted on a host operating system, specifically \textit{Linux Ubuntu 22.04}, running on a machine equipped with an \textit{Intel\textregistered{} Core\textsuperscript{TM} i7} CPU operating at a clock speed of 3.60GHz and 32.00 GB of RAM. The traces were recorded on a guest operating system, also \textit{Ubuntu 22.04}, which was configured with 16 GB of RAM and 10 CPUs. The guest operating system was deployed as a virtual machine using \textit{Oracle VM VirtualBox 6.1}.
+
+To capture and analyze the traces, we utilized \textit{LTTng 2.13.9} as the tracing tool and \textit{Trace Compass 8.3} as the analysis tool. These tools provided the necessary functionality to record and examine the performance-related events and metrics during the experiments.
+
+\subsection{Network Noise Test-case}
+To generate network noise, we implemented a test scenario using the \textit{wget} command to retrieve data from the website "\textit{www.google.com}", with a limited download rate of 4KB/s. Traces were collected during the execution of this application, capturing various network-related events and metrics. Subsequently, we introduced network noise deliberately by running another application, curl, which attempted to download a large file from the address "\textit{https://speed.hetzner.de/100MB.bin}." This intentional overload on the network caused disturbances and introduced noise in the network trace. By comparing the timings between this noisy trace and a separate network trace, the proposed approach was able to identify the additional time incurred due to the presence of network noise. This analysis provided valuable insights into the impact of network noise on network performance and latency.
+
+\begin{figure}[tbp]
+	\begin{subfigure}[b]{1\linewidth}
+		\centering
+		\includegraphics[width=\textwidth]{noise-free-network.png}
+  	\caption{The noise-free setup.}
+        \label{noise-free-network}
+	\end{subfigure}\hfill
+	\begin{subfigure}[b]{1\linewidth}
+		\centering
+		\includegraphics[width=\textwidth]{noise-network.png}
+            \caption{The noisy setup.}
+            \label{noise-network}
+	\end{subfigure}
+    \caption{The \textit{Network Noise} view shows the noise in the \textit{Network Noise} test case.}
+    \label{NetworkNoiseTestCase}
+\end{figure}
+
+
+Fig.\ref{NetworkNoiseTestCase} represents the proposed \textit{Network Noise} view, showcasing the effects of network noise on two monitored metrics in the \textit{Network Noise} test case: \textit{Trs\_Wait\_Time} and \textit{Rcv\_Wait\_Time}. In the presence of network noise, as depicted in Fig.\ref{noise-network}, both metrics exhibit high fluctuations. The \textit{Trs\_Wait\_Time}, which represents the time between when the CPU intends to send a message over the network and when the message is actually sent, shows significant variations. Similarly, the \textit{Rcv\_Wait\_Time}, which represents the delay between the network card receiving a packet and the associated thread receiving the waking event, also experiences fluctuations. Comparing Fig.\ref{noise-network} with Fig.\ref{noise-free-network}, which represents the metrics in a noise-free environment, clearly demonstrates the impact of network noise. In the noisy network scenario, where a file is being downloaded, the fluctuations in \textit{Trs\_Wait\_Time} and \textit{Rcv\_Wait\_Time} are more pronounced, indicating the disruptions caused by the network noise.
+
+\subsection{Disk Noise Test-case}
+
+To design the disk I/O noise test case, a Python script was developed to concurrently read 10 distinct files using 10 different threads. Each file contains random characters, resulting in an approximate size of 100 MB per file. Before tracing the behavior of this application, we took the precaution of clearing the cache by executing the command "sync; echo 3 \> /proc/sys/vm/drop\_caches". This step was taken to eliminate any caching effects and ensure a more accurate representation of the impact of disk I/O noise on system performance. To create disk I/O noise, three recursive \textit{grep}s were run concurrently in the background. The \textit{grep} tool~\cite{grep} is a command-line utility commonly used in Unix-based systems to search for specific patterns within text files. These three \textit{grep}s running in the background generated a noisy environment in the test case, while the proposed approach aims to detect and visualize the root cause of the noise.
+
+
+\begin{figure}[tbp]
+	\begin{subfigure}[b]{1\linewidth}
+		\centering
+		\includegraphics[width=\textwidth]{DiskViewNoiseFree.png}
+  	\caption{The noise-free setup.}
+        \label{DiskViewNoiseFree}
+	\end{subfigure}\hfill
+	\begin{subfigure}[b]{1\linewidth}
+		\centering
+		\includegraphics[width=\textwidth]{DiskViewNoisy.png}
+            \caption{The noisy setup.}
+            \label{DiskViewNoisy}
+	\end{subfigure}
+    \caption{The \textit{Disk Noise} view shows the noise in the \textit{Disk Noise} test case.}
+    \label{DiskNoiseTestCase}
+\end{figure}
+
+
+To do so, we timed how long it took each process in the waiting queue and elevator queue to see if the service time was delayed. We did this by iterating through events in TraceCompass and upon important block\_rq events we took action. The events we were the most interested in were block\_rq\_insert and block\_rq\_issue events as these indicated when the CPU wants to insert a block operation request into the queue and when issuing a pending block IO request operation to the device driver respectively. These events can also be viewed as the process that wants to access the disk getting put into a queue and when it actually gets access and exits. in TraceCompass. upon encountering a block\_rq\_insert we pushed the event into a 2d array in order to match it up with its associated block\_rq\_issue event matching them up by the sector they're writing to and which CPU handled it.  We can then determine how much longer the noisy trace takes based on additional time spent in the elevator or waiting queue. 
+
+\begin{table*}[tb]\centering
+\caption{Noisy Trace }
+\label{tab:modules}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{block\_rq\_insert count} & \multicolumn{1}{c|}{block\_rq\_issue} & \multicolumn{1}{c|}{block\_rq\_complete} & \multicolumn{1}{c|}{Total Disk I/O Noise} & \multicolumn{1}{c|}{Average Noise}    \\ \hline
+253   & 253    & 253   & 2609.915   & 10.3159       \\ \hline
+137   & 137    & 137   & 1644.336   & 12.0025       \\ \hline
+128   & 128    & 128   & 634.261    & 4.9552        \\ \hline
+139   & 139    & 139   & 3479.797   & 25.0345       \\ \hline
+\end{tabular}
+
+\end{table*}
+
+
+\subsection{CPU Noise Test-case}
+To create the \textit{CPU Noise} test case, we developed a simple Python code that generates the first 100,000 prime numbers. The code was executed, and the corresponding traces were collected for noise free environment. To generate additional workload and introduce noise into the system, we employed Sysbench~\cite{sysbench}, a benchmarking tool widely used for measuring system performance under different workloads and stress testing scenarios. Sysbench was configured to utilize maximum CPU resources for calculating the first 10,000 prime numbers. By running nine instances of Sysbench concurrently, we intentionally challenged the CPU scheduler, resulting in a noisy trace that accurately represented the impact of CPU noise on system behavior.
+
+\begin{figure}[tbp]
+	\begin{subfigure}[b]{1\linewidth}
+		\centering
+		\includegraphics[width=\textwidth]{cpunoiseview1.png}
+  	\caption{The noise-free environment.}
+        \label{cpunoiseviewtestcase1}
+	\end{subfigure}\hfill
+	\begin{subfigure}[b]{1\linewidth}
+		\centering
+		\includegraphics[width=\textwidth]{cpunoiseview3.png}
+            \caption{The noisy system.}
+            \label{cpunoiseviewtestcase2}
+	\end{subfigure}
+    \caption{The CPU Noise view monitors the duration between \texttt{sched\_switch} and \texttt{sched\_wakeup} events.}
+    \label{cpunoiseviewtestcase}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centerline{\includegraphics[width=0.5\textwidth]{cpuschedusecase.png}}
+  \caption{The number of \texttt{sched\_switch} events in each 500ms window (W) of the running process in the \textit{CPU Noise} test case, with and without the presence of noise. }
+  \label{noisecpu}
+\end{figure} 
+
+The duration between \texttt{sched\_switch} and \texttt{sched\_wakeup} events in \textit{CPU Noise} test case is depicted in Fig.~\ref{cpunoiseviewtestcase}. Due to the short duration of the entire test case (approximately 2.5 seconds), each bar representing the duration appears very small, almost like a dot. To provide a clearer visualization of the events, we created a diagram in Fig.~\ref{noisecpu} that illustrates the number of \texttt{sched\_switch} events associated with the main Python code in both the noisy and noise-free environments. As depicted, the number of events in the noisy environment is noticeably higher compared to the noise-free environment. By monitoring this metric, the proposed approach effectively detects the presence of noise in the CPU Noise test case scenario. The increased number of \texttt{sched\_switch} events indicates a higher frequency of CPU context switches, which can be attributed to the additional workload generated by the noisy environment. This analysis enables the proposed approach to identify and quantify the impact of CPU noise on the system's performance.
+
+
+\subsection{IRQ Noise Test-case}
+The evaluation of the system’s response to various types of noise serves as a crucial step in understanding modern operating systems' potential challenges and reliability. The evaluation section aims to assess the impact of various types of noise on system behavior and performance, based on the methodology outlined in the previous section. We conducted a comprehensive analysis of the system by tracing it under both noise-free and noisy conditions, allowing us to compare and evaluate the effects of different noise sources on key system components. To evaluate the impact of IRQ noise, we followed the methodology outlined in the previous section. Firstly, a noise-free trace was obtained by tracing a \textit{wget} function call while the OSNOISE\_WORKLOAD feature was disabled. This ensured that no additional IRQs were introduced into the system. Then, to generate the noisy trace, we turned the OSNOISE\_WORKLOAD feature to introduce additional IRQs into the system. We then analyzed and compared these traces in TraceCompass. We wrote a Javascript program to determine the time between our main focuses of how the noise impacts our program. We focus on three main metrics: the total amount of time spent in an IRQ, the total amount of events, and the average time each event was. We did this by iterating through the events in TraceCompass and when we come upon an IRQ event, either irq\_handler\_entry or irq\_handler\_exit pushed them into a 2d array in pairs. The following results in Table~\ref{tab:modules} show the times taken in IRQs during this execution. The time is recorded in microseconds.
+
+\begin{table}[]\centering
+\caption{Noisy Trace }
+\label{tab:modules}
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{1}{|c}{Total} & \multicolumn{1}{|c|}{Number of Events} & \multicolumn{1}{c|}{Average}    \\ \hline
+17771                       & 36           & 483.638       \\ \hline
+21192                       & 237          & 89.418       \\ \hline
+7755                        & 67           & 115.746         \\ \hline
+11029                       & 81           & 136.16         \\ \hline
+13020                       & 208          & 62.596         \\ \hline
+\end{tabular}
+
+\end{table}
+
+
+
+
+\section{Conclusion and future works}\label{conclusionsection}
+
+
+Noise detection and root cause analysis are critical for configuring systems and ensuring reliable application performance. This study presents an approach for noise detection and root cause analysis using system-level execution tracing. By monitoring system-level events, our proposed approach detects a wide range of performance noises. It gathers system-level events, maintains traces, analyzes the root causes of different noises, and visualizes the metrics through a four-module architecture. Experimental results confirm the high effectiveness, accuracy, and efficiency of our proposed approach in detecting various noises with different root causes by monitoring kernel-level traces. This approach provides valuable insights into system performance by identifying the sources of noise and their impact on the reliability of the application.
+
+
+For future work, we have identified three main directions to further enhance our approach. Firstly, we aim to extend the noise metrics by analyzing additional root causes. This involves monitoring events related to CPU management, memory management, and external device management.  Secondly, we plan to explore noise detection in virtualized environments. Monitoring the impact of noise on the host system and co-existing VMs solely through kernel event processing is of great interest due to the widespread use of containers and virtual machines in data centers. Lastly, we intend to develop a plugin for TraceCompass specifically focused on noise detection. TraceCompass is a widely-used tool for performance monitoring and analysis. By integrating our noise detection capabilities into TraceCompass, we can empower system administrators with enhanced noise monitoring and analysis features. This plugin will enable administrators to effectively monitor and analyze noise root causes, providing valuable insights for system optimization.
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{NDRef}
+
+\end{document}
