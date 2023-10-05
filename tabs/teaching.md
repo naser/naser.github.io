@@ -18,8 +18,8 @@ title: Teaching
   [Fall 2022]({{ site.baseurl }}/tabs/courses/2022/fall/4p01),
   [Fall 2021]({{ site.baseurl }}/tabs/courses/2021/fall/4p01), 
   Fall 2020
-  Theory of software engineering. Topics include plan-driven development, Agile development, software requirements elicitation 
-  and presentation, verification of software correctness, software maintenance, software observability, software robustness, safety and security. AI in Software Engineering, And introduction to tools such as Git, GitHub, Azure DevOps, and GitHub AI CoPilot.
+  
+  Theory of software engineering. Topics include plan-driven development, Agile development, software requirements elicitation, software design and analysis, design patterns, software testing, software maintenance, software observability, software robustness, safety and security. AI in Software Engineering, And introduction to tools such as Git, GitHub, Azure DevOps, and GitHub AI CoPilot.
 
 * COSC 4P02 | Software Engineering 2\
   [Winter 2023]({{ site.baseurl }}/tabs/courses/2023/winter/4p02), 
