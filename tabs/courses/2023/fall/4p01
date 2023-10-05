@@ -1,1 +1,41 @@
-4p01
+---
+layout: page
+title: Software Engineering 1 (COSC 4P01)
+---
+
+#### Course Description
+
+Topics include plan-driven development, Agile development, software requirements elicitation and presentation, verification of software correctness, 
+redundancy, robustness, safety and security. Creation of robust software requirements document. Introduction to tools such as Git, GitHub, Azure DevOps, GitHub Copilot AI.
+
+**Credit Hours**: 36\
+**Location**: TH242 \
+**Period**: Sep 06, 2023 to Dec 05, 2023\
+**Time**: Monday: 8:00 to 9:30, Friday: 8:00 to 9:30\
+**TAs**:  Ghazal Khodabandeh (zw22sr@brocku.ca), Alireza Ezaz (ow23gq@brocku.ca), Nikta Gohari Sadr (zu22of@brocku.ca)\
+**Prerequisite**: COSC 2P03 (minimum 60 percent)\
+**Exclusions**: Completion of this course will replace previous assigned grade and credit obtained in COSC 4F00.
+
+#### Recommended Textbooks
+* Software Engineering (10e) by Ian Sommerville, ISBN: 9780133943030.
+* Software Engineering: A Practitioner’s Approach (9e) by Roger S. Pressman, ISBN: 9780078022128.
+
+#### Tentative Outline
+Tentative Outline
+* Introduction to Software Engineering: An overview of software engineering principles, methodologies, and the role of AI in modern software development.
+* Software Processes & Agile: An exploration of software development processes, including Agile methodologies, with insights into how AI can enhance project management and efficiency.
+* Requirements Engineering: Understanding software requirements gathering and the application of AI techniques in automating parts of this process for improved accuracy.
+* System Modelling: Introduction to system modeling techniques, including how AI is used for predictive modeling and decision support in software projects.
+* Architectural Design: Exploring software architecture principles and the role of AI in optimizing architectural decisions and enhancing system performance.
+* Design & Implementation: Delving into software design and implementation, with a focus on AI-driven design patterns and best practices.
+* Software Testing: An examination of software testing strategies, including AI-powered testing tools and techniques for faster and more effective testing.
+* Software Evolution and Maintenance: Understanding the challenges of software maintenance and how AI can assist in identifying and fixing issues proactively.
+* Observable Systems: Discussing the concept of observability in software systems and how AI-based monitoring and analytics can improve system reliability.
+* Safety and Security Engineering: Addressing the integration of AI in ensuring the safety and security of software applications, including threat detection and prevention.
+* Artificial Intelligence in Software Engineering: An introduction of the role of AI in various aspects of software engineering, from code generation to quality assurance, and its potential impact on the field.
+
+
+#### Office hours 
+* Monday, Friday: 9:30 to 11:30
+* Offline questions: by email
+* Online session: by appointment
