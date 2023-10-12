@@ -39,39 +39,59 @@ We also worked on a software project for the Niagara 2022 Canada Summer Games. Y
     <table>
         <tr>
             <td><img src="{{ site.baseurl }}/assets/img/people/image.png"/></td>
-            <td><img src="{{ site.baseurl }}/assets/img/people/amir.jpg"/></td>
             <td><img src="{{ site.baseurl }}/assets/img/people/mehenika.jpg"/></td>
-            <td><img src="{{ site.baseurl }}/assets/img/people/pranjal.jpeg"/></td>
-        </tr>
-        <tr>
-            <td style="text-align: center"><a href="https://www.linkedin.com/in/morteza-noferesti-a69862188">Morteza Noferesti</a></td>
-            <td style="text-align: center"><a href="https://www.linkedin.com/in/amirmahdi-khosravi/">Amirmahdi Khosravi Tabrizi</a></td>
-            <td style="text-align: center"><a href="https://www.linkedin.com/in/mehenika">Mehenika Akter</a></td>
-            <td style="text-align: center"><a href="https://pranjal.net/">Pranjal Chakraborty</a></td>
-        </tr>
-        <tr>
-            <td><img src="{{ site.baseurl }}/assets/img/people/dipanzan.jpg"/></td>
-            <td><img src="{{ site.baseurl }}/assets/img/people/adib.png"/></td>
             <td><img src="{{ site.baseurl }}/assets/img/people/image.png"/></td>
             <td><img src="{{ site.baseurl }}/assets/img/people/masoumeh.jpg"/></td>
         </tr>
         <tr>
-            <td style="text-align: center"><a href="https://www.linkedin.com/in/dipanzan-islam-583131178/">Dipanzan Islam</a></td>
-            <td style="text-align: center">Mohammed Adib Khan</td>
-            <td style="text-align: center">Yue Guan</td>
+            <td style="text-align: center"><a href="https://www.linkedin.com/in/morteza-noferesti-a69862188">Morteza Noferesti</a></td>
+            <td style="text-align: center"><a href="https://www.linkedin.com/in/mehenika">Mehenika Akter</a></td>
+            <td style="text-align: center">Madeline Janecek</td>
             <td style="text-align: center"><a href="https://www.linkedin.com/in/masoumeh-nourollahi-3ba5b536/">Masoumeh Nourollahi</a></td>
         </tr>
         <tr>
+            <td><img src="{{ site.baseurl }}/assets/img/people/alireza.png"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/ghazal.png"/></td>
             <td><img src="{{ site.baseurl }}/assets/img/people/image.png"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/tom.png"/></td>
+        </tr>
+        <tr>
+            <td style="text-align: center"><a href="https://www.linkedin.com/in/s-alireza-ezaz-93a0881b9/">Alireza Ezaz</a></td>
+            <td style="text-align: center"><a href="http://ghazalkhodabandeh.tilda.ws/">Ghazal Khodabandeh</a></td>
+            <td style="text-align: center">Yue Guan</td>
+            <td style="text-align: center"><a href="https://www.linkedin.com/in/tom-wallace-597099196/">Tom Wallace</a></td>
+        </tr>
+        <tr>
             <td><img src="{{ site.baseurl }}/assets/img/people/image.png"/></td>
             <td><img src="{{ site.baseurl }}/assets/img/people/image.png"/></td>
             <td><img src="{{ site.baseurl }}/assets/img/people/riley.jpg"/></td>
         </tr>
         <tr>
             <td style="text-align: center"><a href="https://www.linkedin.com/in/raghav-bhardwaj-878067153/">Raghav Bhardwaj</a></td>
-            <td style="text-align: center">Madeline Janecek</td>
             <td style="text-align: center">Tong Zhang</td>
             <td style="text-align: center">Riley VanDonge</td>
+        </tr>
+    </table>
+</div>
+<p></p>
+
+### Previous Members
+
+<p></p>
+
+<div align="center">
+    <table>
+        <tr>
+            <td><img src="{{ site.baseurl }}/assets/img/people/amir.jpg"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/pranjal.jpeg"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/dipanzan.jpg"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/adib.png"/></td>
+        </tr>
+        <tr>
+            <td style="text-align: center"><a href="https://www.linkedin.com/in/amirmahdi-khosravi/">Amirmahdi Khosravi Tabrizi</a></td>
+            <td style="text-align: center"><a href="https://pranjal.net/">Pranjal Chakraborty</a></td>
+            <td style="text-align: center"><a href="https://www.linkedin.com/in/dipanzan-islam-583131178/">Dipanzan Islam</a></td>
+            <td style="text-align: center"><a href="https://www.linkedin.com/in/mohammedadibkhan/">Mohammed Adib Khan</a></td>
         </tr>
     </table>
 </div>
