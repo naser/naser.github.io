@@ -14,7 +14,7 @@ cover-img: /assets/img/path.jpg
 --->
 My research focuses on software engineering, software analysis and debugging, performance evaluation, and energy efficiency. I develop operating-system-level methods, including execution tracing and profiling, for IoT, cloud, and distributed systems.
 
-I am currently recruiting master’s and PhD students, visiting researchers, and postdoctoral fellows. Researchers whose interests align with these areas can contact me through the [Contact page]({{ site.baseurl }}/tabs/contact).
+I am currently recruiting master's and PhD students, visiting researchers, and postdoctoral fellows. Researchers whose interests align with these areas can contact me through the [Contact page]({{ site.baseurl }}/tabs/contact).
 
 ### Research Projects
 Current research projects:
@@ -100,17 +100,17 @@ We also worked on a software project for the Niagara 2022 Canada Summer Games. Y
 
 The complete year-grouped catalog contains 89 publications. Each paper page provides the problem, method, findings, limitations, future work, keywords, authoritative source links, and ready-to-copy citations.
 
-[Browse all publications by year](https://naser.github.io/research-publications/) · [Metadata repository](https://github.com/naser/research-publications)
+[Browse all publications by year](https://naser.github.io/research-publications/) | [Metadata repository](https://github.com/naser/research-publications)
 
 #### Latest publications
 
-- 2026 — [B-Perf: Black-box Performance Antipattern Detection Using System-level Execution Tracing](https://naser.github.io/research-publications/papers/b-perf-black-box-performance-antipatterns/)
-- 2026 — [CARE: Context Aware Root Cause Identification Using Distributed Traces and Profiling Metrics](https://naser.github.io/research-publications/papers/care-context-aware-root-cause-identification/)
-- 2026 — [DTraComp: Comparing distributed execution traces for understanding intermittent latency sources](https://naser.github.io/research-publications/papers/dtracomp-distributed-trace-comparison/)
-- 2026 — [LMAT: An adaptive tracing approach based on efficient system behavior analysis using language models](https://naser.github.io/research-publications/papers/lmat-adaptive-tracing-language-models/)
-- 2026 — [Observability and Runtime Governance for Agentic AI Systems](https://naser.github.io/research-publications/papers/observability-runtime-governance-agentic-ai-systems/)
-- 2026 — [Rethinking Performance Debugging: From Optimization to Collaborative Reasoning](https://naser.github.io/research-publications/papers/rethinking-performance-debugging-from-optimization-to-collaborative-reasoning/)
-- 2026 — [TAAF: A Trace Abstraction and Analysis Framework Synergizing Knowledge Graphs and LLMs](https://naser.github.io/research-publications/papers/taaf-trace-abstraction-analysis-framework/)
-- 2026 — [TraceSynth: Generating Production-Quality Kernel Traces with Constraint-Guided Diffusion Models](https://naser.github.io/research-publications/papers/tracesynth-kernel-trace-generation/)
+- 2026 - [B-Perf: Black-box Performance Antipattern Detection Using System-level Execution Tracing](https://naser.github.io/research-publications/papers/b-perf-black-box-performance-antipatterns/)
+- 2026 - [CARE: Context Aware Root Cause Identification Using Distributed Traces and Profiling Metrics](https://naser.github.io/research-publications/papers/care-context-aware-root-cause-identification/)
+- 2026 - [DTraComp: Comparing distributed execution traces for understanding intermittent latency sources](https://naser.github.io/research-publications/papers/dtracomp-distributed-trace-comparison/)
+- 2026 - [LMAT: An adaptive tracing approach based on efficient system behavior analysis using language models](https://naser.github.io/research-publications/papers/lmat-adaptive-tracing-language-models/)
+- 2026 - [Observability and Runtime Governance for Agentic AI Systems](https://naser.github.io/research-publications/papers/observability-runtime-governance-agentic-ai-systems/)
+- 2026 - [Rethinking Performance Debugging: From Optimization to Collaborative Reasoning](https://naser.github.io/research-publications/papers/rethinking-performance-debugging-from-optimization-to-collaborative-reasoning/)
+- 2026 - [TAAF: A Trace Abstraction and Analysis Framework Synergizing Knowledge Graphs and LLMs](https://naser.github.io/research-publications/papers/taaf-trace-abstraction-analysis-framework/)
+- 2026 - [TraceSynth: Generating Production-Quality Kernel Traces with Constraint-Guided Diffusion Models](https://naser.github.io/research-publications/papers/tracesynth-kernel-trace-generation/)
 
 <!-- END GENERATED PUBLICATIONS -->
