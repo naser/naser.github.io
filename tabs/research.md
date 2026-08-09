@@ -1,6 +1,10 @@
 ---
 layout: page
 title: Research
+share-title: Research and publications | Naser Ezzati-Jivan
+share-description: Research in kernel and system tracing, software performance, observability, debugging, cloud systems, and distributed systems, with an 89-paper structured publication catalog.
+head-extra:
+  - research-jsonld.html
 ---
 
 <!--- 
@@ -8,15 +12,9 @@ Add an image to the /assets/img/ directory and add that file name like the follo
 
 cover-img: /assets/img/path.jpg 
 --->
-My research interest consists of-
+My research focuses on software engineering, software analysis and debugging, performance evaluation, and energy efficiency. I develop operating-system-level methods, including execution tracing and profiling, for IoT, cloud, and distributed systems.
 
-* Software Engineering,
-* Software Analysis,
-* Software Debugging,
-* Performance Evaluation,
-* Energy Efficiency
-
-I am particularly interested in operating system level methods, e.g., execution tracing and profiling, to support the aformentioned topics in the context of IoT, cloud and distributed systems. Currently, I am looking for masters and PhD students, visiting researchers, and postdocs to work with. If your research interests aligns with mine, head over to the "[Contact me]({{ site.baseurl }}/tabs/contact)" page and reach out.
+I am currently recruiting master’s and PhD students, visiting researchers, and postdoctoral fellows. Researchers whose interests align with these areas can contact me through the [Contact page]({{ site.baseurl }}/tabs/contact).
 
 ### Research Projects
 Current research projects:
@@ -36,12 +34,12 @@ We also worked on a software project for the Niagara 2022 Canada Summer Games. Y
 </style>
 
 <div align="center">
-    <table>
+    <table role="presentation">
         <tr>
-            <td><img src="{{ site.baseurl }}/assets/img/people/image.png"/></td>
-            <td><img src="{{ site.baseurl }}/assets/img/people/mehenika.jpg"/></td>
-            <td><img src="{{ site.baseurl }}/assets/img/people/image.png"/></td>
-            <td><img src="{{ site.baseurl }}/assets/img/people/masoumeh.jpg"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/image.png" alt="" loading="lazy"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/mehenika.jpg" alt="" loading="lazy"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/image.png" alt="" loading="lazy"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/masoumeh.jpg" alt="" loading="lazy"/></td>
         </tr>
         <tr>
             <td style="text-align: center"><a href="https://www.linkedin.com/in/morteza-noferesti-a69862188">Morteza Noferesti</a></td>
@@ -50,10 +48,10 @@ We also worked on a software project for the Niagara 2022 Canada Summer Games. Y
             <td style="text-align: center"><a href="https://www.linkedin.com/in/masoumeh-nourollahi-3ba5b536/">Masoumeh Nourollahi</a></td>
         </tr>
         <tr>
-            <td><img src="{{ site.baseurl }}/assets/img/people/alireza.png"/></td>
-            <td><img src="{{ site.baseurl }}/assets/img/people/ghazal.png"/></td>
-            <td><img src="{{ site.baseurl }}/assets/img/people/image.png"/></td>
-            <td><img src="{{ site.baseurl }}/assets/img/people/tom.png"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/alireza.png" alt="" loading="lazy"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/ghazal.png" alt="" loading="lazy"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/image.png" alt="" loading="lazy"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/tom.png" alt="" loading="lazy"/></td>
         </tr>
         <tr>
             <td style="text-align: center"><a href="https://www.linkedin.com/in/s-alireza-ezaz-93a0881b9/">Alireza Ezaz</a></td>
@@ -62,9 +60,9 @@ We also worked on a software project for the Niagara 2022 Canada Summer Games. Y
             <td style="text-align: center"><a href="https://www.linkedin.com/in/tom-wallace-597099196/">Tom Wallace</a></td>
         </tr>
         <tr>
-            <td><img src="{{ site.baseurl }}/assets/img/people/image.png"/></td>
-            <td><img src="{{ site.baseurl }}/assets/img/people/image.png"/></td>
-            <td><img src="{{ site.baseurl }}/assets/img/people/riley.jpg"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/image.png" alt="" loading="lazy"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/image.png" alt="" loading="lazy"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/riley.jpg" alt="" loading="lazy"/></td>
         </tr>
         <tr>
             <td style="text-align: center"><a href="https://www.linkedin.com/in/raghav-bhardwaj-878067153/">Raghav Bhardwaj</a></td>
@@ -80,12 +78,12 @@ We also worked on a software project for the Niagara 2022 Canada Summer Games. Y
 <p></p>
 
 <div align="center">
-    <table>
+    <table role="presentation">
         <tr>
-            <td><img src="{{ site.baseurl }}/assets/img/people/amir.jpg"/></td>
-            <td><img src="{{ site.baseurl }}/assets/img/people/pranjal.jpeg"/></td>
-            <td><img src="{{ site.baseurl }}/assets/img/people/dipanzan.jpg"/></td>
-            <td><img src="{{ site.baseurl }}/assets/img/people/adib.png"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/amir.jpg" alt="" loading="lazy"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/pranjal.jpeg" alt="" loading="lazy"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/dipanzan.jpg" alt="" loading="lazy"/></td>
+            <td><img src="{{ site.baseurl }}/assets/img/people/adib.png" alt="" loading="lazy"/></td>
         </tr>
         <tr>
             <td style="text-align: center"><a href="https://www.linkedin.com/in/amirmahdi-khosravi/">Amirmahdi Khosravi Tabrizi</a></td>
