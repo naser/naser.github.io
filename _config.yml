@@ -10,12 +10,14 @@
 ############################
 
 # Name of website
-title: ""
+title: "Naser Ezzati-Jivan"
 
 # Your name to show in the footer
 author: Naser Ezzati-Jivan
 
 baseurl: ""
+url: "https://naser.github.io"
+description: "Research in software engineering, kernel and system tracing, performance analysis, observability, debugging, cloud systems, and distributed systems."
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -55,7 +57,7 @@ social-network-links:
   email: "naser@brocku.ca"
   # rss: true  # remove this line if you don't want to show an RSS link at the bottom
   # facebook: deanattali
-  # github: naser
+  github: naser
   # twitter: daattali
   # patreon: DeanAttali
   # youtube: c/daattali
@@ -74,8 +76,8 @@ social-network-links:
 #  telegram: yourname
 #  calendly: yourname
 #  mastodon: instance.url/@username
-#  ORCID: your ORCID ID
-#  google-scholar: your google scholar
+  ORCID: 0000-0003-1435-6297
+  google-scholar: sJWcLv8AAAAJ
 #  discord: invite/invite_code or users/userid 
 #  kaggle: yourname
 #  hackerrank: yourname
@@ -120,7 +122,7 @@ edit_page_button: false
 navbar-var-length: false
 
 # The keywords to associate with your website, for SEO purposes
-#keywords: "my,list,of,keywords"
+keywords: "Naser Ezzati-Jivan, software engineering, kernel tracing, system tracing, performance analysis, observability, software debugging, distributed systems, cloud computing"
 
 ######################################
 # --- Colours / background image --- #
