@@ -5,7 +5,7 @@ title: Complete Bio
 
 ### Currently Hold Positions
 
-* Assistant Professor\
+* Associate Professor\
   2020 - Present\
   Computer Science Department, Brock University
   
