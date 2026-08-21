@@ -11,6 +11,18 @@ I am an Associate Professor in the [Department of Computer Science at Brock Univ
 
 I welcome inquiries from master's and PhD students, visiting researchers, postdoctoral fellows, and collaborators whose interests align with these areas. Please use the [Contact page]({{ site.baseurl }}/tabs/contact/) to get in touch.
 
+### Research resources
+
+The following links separate the human-facing profile from the machine-readable publication record:
+
+- [Research news and updates](https://naser.github.io/tabs/news/)
+- [Human-readable publication catalog](https://naser.github.io/research-publications/)
+- [Machine-readable JSON catalog](https://naser.github.io/research-publications/catalog.json)
+- [Catalog schema](https://naser.github.io/research-publications/schemas/paper.schema.json)
+- [Catalog discovery guide](https://naser.github.io/research-publications/llms.txt)
+- [Metadata repository](https://github.com/naser/research-publications)
+- [ORCID](https://orcid.org/0000-0003-1435-6297) and [Google Scholar](https://scholar.google.com/citations?user=sJWcLv8AAAAJ&hl=en)
+
 ### Research directions
 
 My research includes:
@@ -58,7 +70,7 @@ The names below are retained from the research-group page as members and collabo
 
 ### Research publications
 
-The complete catalog contains 89 publications. The list below is generated from the canonical catalog, with the most recent publication years first. Each paper links to its detailed record with technical summaries, keywords, identifiers, authoritative source links, and citation formats.
+The current catalog contains 89 canonical publication records. The list below is generated from that catalog, with the most recent publication years first. Each paper links to its detailed record with technical summaries, keywords, identifiers, authoritative source links, and citation formats.
 
 [Browse the searchable publication catalog](https://naser.github.io/research-publications/) · [Metadata repository](https://github.com/naser/research-publications)
 

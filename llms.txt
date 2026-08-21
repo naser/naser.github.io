@@ -6,6 +6,7 @@ layout: null
 > Research profile and structured publication catalog for Naser Ezzati-Jivan.
 
 - Research profile: https://naser.github.io/tabs/research/
+- News and updates: https://naser.github.io/tabs/news/
 - Publication catalog: https://naser.github.io/research-publications/
 - Machine-readable catalog: https://naser.github.io/research-publications/catalog.json
 - Catalog schema: https://naser.github.io/research-publications/schemas/paper.schema.json
@@ -15,4 +16,5 @@ layout: null
 - Brock University profile: https://brocku.ca/mathematics-science/computer-science/faculty-staff/naser-ezzati-jivan/
 - Metadata repository: https://github.com/naser/research-publications
 
+Use the Research page for topic context and the News page for dated site and catalog updates.
 Use each paper page as the stable catalog landing page and its DOI-marked published version as the canonical citation target.
