@@ -1,6 +1,9 @@
 ---
 layout: post
 title: ""
+noindex: true
+sitemap: false
+canonical_url: "https://naser.github.io/"
 ---
 
 ![Naser]({{ site.baseurl }}/assets/img/naser.png){: width="100%" :}
