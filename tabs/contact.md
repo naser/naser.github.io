@@ -1,6 +1,9 @@
 ---
 layout: page
 title: Contact Me
+share-title: Contact Naser Ezzati-Jivan | Brock University
+share-description: Contact Naser Ezzati-Jivan, Associate Professor of Computer Science at Brock University, about research collaboration, graduate supervision, or publications.
+keywords: "Naser Ezzati-Jivan, Brock University, research collaboration, graduate supervision, software performance engineering"
 ---
 
 ***Prospective students:*** My contact information is given below. Write a short message about why you are interested to work with me, along with your CV.
