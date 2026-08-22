@@ -17,7 +17,7 @@ author: Naser Ezzati-Jivan
 
 baseurl: ""
 url: "https://naser.github.io"
-description: "Research in software engineering, kernel and system tracing, performance analysis, observability, debugging, cloud systems, and distributed systems."
+description: "Associate Professor of Computer Science at Brock University researching software performance engineering, kernel and system tracing, observability, software debugging, distributed and multicore systems, cloud computing, and streaming data analysis."
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -123,7 +123,7 @@ edit_page_button: false
 navbar-var-length: false
 
 # The keywords to associate with your website, for SEO purposes
-keywords: "Naser Ezzati-Jivan, software engineering, kernel tracing, system tracing, performance analysis, observability, software debugging, distributed systems, cloud computing"
+keywords: "Naser Ezzati-Jivan, Brock University, software performance engineering, kernel tracing, system tracing, software debugging, observability, distributed systems, multicore systems, cloud computing, streaming data analysis"
 
 ######################################
 # --- Colours / background image --- #
