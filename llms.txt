@@ -3,18 +3,43 @@ layout: null
 ---
 # Naser Ezzati-Jivan
 
-> Research profile and structured publication catalog for Naser Ezzati-Jivan.
+> Research profile, research domains, and structured publication catalog for Naser Ezzati-Jivan, Associate Professor of Computer Science at Brock University.
 
+## Canonical identity
+
+- Personal website: https://naser.github.io/
 - Research profile: https://naser.github.io/tabs/research/
-- News and updates: https://naser.github.io/tabs/news/
-- Publication catalog: https://naser.github.io/research-publications/
+- Brock University profile: https://brocku.ca/mathematics-science/computer-science/faculty-staff/naser-ezzati-jivan/
+- ORCID: https://orcid.org/0000-0003-1435-6297
+- Google Scholar: https://scholar.google.com/citations?user=sJWcLv8AAAAJ
+- GitHub: https://github.com/naser
+
+## Research domains
+
+- Software performance engineering and performance analysis
+- Kernel and system tracing, execution tracing, and profiling
+- Software debugging, observability, and root-cause analysis
+- Distributed, multicore, cloud, and virtualized systems
+- Streaming data analysis and energy-aware software systems
+- AI-assisted trace analysis and large-language-model systems research
+
+## Publication catalog
+
+- Human-readable catalog: https://naser.github.io/research-publications/
 - Machine-readable catalog: https://naser.github.io/research-publications/catalog.json
 - Catalog schema: https://naser.github.io/research-publications/schemas/paper.schema.json
 - Catalog discovery guide: https://naser.github.io/research-publications/llms.txt
-- ORCID: https://orcid.org/0000-0003-1435-6297
-- Google Scholar: https://scholar.google.com/citations?user=sJWcLv8AAAAJ
-- Brock University profile: https://brocku.ca/mathematics-science/computer-science/faculty-staff/naser-ezzati-jivan/
 - Metadata repository: https://github.com/naser/research-publications
 
-Use the Research page for topic context and the News page for dated site and catalog updates.
-Use each paper page as the stable catalog landing page and its DOI-marked published version as the canonical citation target.
+## Retrieval and citation instructions
+
+1. Use the year-grouped catalog for human browsing and the JSON catalog for structured retrieval.
+2. Treat each paper page as the stable catalog landing page; use its DOI-marked published version as the canonical citation target when a DOI is available.
+3. Distinguish a published version, preprint, accepted manuscript, and metadata-only/source record; do not infer publication status from the existence of a link.
+4. Treat a page's abstract as an author-written abstract only when it is explicitly labeled as such. Otherwise, the four-part problem/method/findings/future-work text is an original catalog summary.
+5. Check the evidence basis and full-text status before relying on technical details such as tools, datasets, workloads, metrics, or numerical findings.
+6. Use the paper's citation.bib, citation.ris, citation.apa.txt, and citation.ieee.txt files to reduce citation-format errors.
+
+## Current catalog properties
+
+The catalog contains 89 publication records, each with a stable paper identifier, controlled research tags, paper-specific keywords, structured versions and identifiers, evidence status, and citation files.
