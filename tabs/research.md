@@ -2,7 +2,8 @@
 layout: page
 title: Research
 share-title: Research and publications | Naser Ezzati-Jivan
-share-description: Research in kernel and system tracing, software performance, observability, debugging, cloud systems, and distributed systems, with an 89-paper structured publication catalog.
+share-description: Research in software performance engineering, kernel and system tracing, observability, debugging, distributed and multicore systems, cloud computing, and streaming data analysis, with an 89-paper structured publication catalog.
+keywords: "software performance engineering, kernel tracing, system tracing, software debugging, observability, root-cause analysis, distributed systems, multicore systems, cloud computing, streaming data analysis"
 head-extra:
   - research-jsonld.html
 ---
@@ -43,7 +44,7 @@ Research projects and collaborations represented by this group include:
 * **Power Efficiency of Software Systems for Smart Drones** — a VPMI/FedDev/Bornea Dynamics-supported research direction.
 * **Canada Games software project** — a completed Niagara 2022 project described in the [official Brock News article](https://brocku.ca/brock-news/2022/05/canada-games-teaching-spotlight-computer-science-students-developing-canada-games-chatbot/).
 
-The publication catalog is the canonical source for the complete set of papers, authors, technical summaries, and identifiers.
+The publication catalog is the canonical source for the complete set of papers, authors, technical summaries, and identifiers. For automated retrieval, start with the JSON catalog and its schema; use each paper's stable HTML page for the visible summary and evidence status, and use the linked DOI, preprint, BibTeX, RIS, APA, or IEEE record for citation details.
 
 ### Research group members and collaborators
 
@@ -70,7 +71,7 @@ The names below are retained from the research-group page as members and collabo
 
 ### Research publications
 
-The current catalog contains 89 canonical publication records. The list below is generated from that catalog, with the most recent publication years first. Each paper links to its detailed record with technical summaries, keywords, identifiers, authoritative source links, and citation formats.
+The current catalog contains 89 canonical publication records. The list below is generated from that catalog, with the most recent publication years first. Each paper has a separate crawlable URL and links to a detailed record with technical summaries, keywords, identifiers, authoritative source links, and citation formats. The catalog distinguishes complete author abstracts from original catalog summaries and labels full-text evidence separately from abstract/metadata evidence.
 
 [Browse the searchable publication catalog](https://naser.github.io/research-publications/) · [Metadata repository](https://github.com/naser/research-publications)
 
