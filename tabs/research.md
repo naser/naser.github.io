@@ -73,7 +73,7 @@ The names below are retained from the research-group page as members and collabo
 
 The current catalog contains 89 canonical publication records. The list below is generated from that catalog, with the most recent publication years first. Each paper has a separate crawlable URL and links to a detailed record with technical summaries, keywords, identifiers, authoritative source links, and citation formats. The catalog distinguishes complete author abstracts from original catalog summaries and labels full-text evidence separately from abstract/metadata evidence.
 
-[Browse the searchable publication catalog](https://naser.github.io/research-publications/) · [Metadata repository](https://github.com/naser/research-publications)
+[Browse the searchable publication catalog](https://naser.github.io/research-publications/) · [Research topics](https://naser.github.io/research-publications/topics/index.html) · [Metadata repository](https://github.com/naser/research-publications)
 
 <!-- BEGIN GENERATED PUBLICATIONS -->
 #### 2026
@@ -200,5 +200,4 @@ The current catalog contains 89 canonical publication records. The list below is
 - [New Approach for Automated Categorizing and Finding Similarities in Online Persian News](https://naser.github.io/research-publications/papers/automated-categorizing-similarities-persian-news/)
 
 <!-- END GENERATED PUBLICATIONS -->
-
 
