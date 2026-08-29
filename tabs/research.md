@@ -3,7 +3,7 @@ layout: page
 title: Research
 share-title: Research and publications | Naser Ezzati-Jivan
 share-description: Research in software performance engineering, kernel and system tracing, observability, debugging, distributed and multicore systems, cloud computing, and streaming data analysis, with an 89-paper structured publication catalog.
-keywords: "software performance engineering, kernel tracing, system tracing, software debugging, observability, root-cause analysis, distributed systems, multicore systems, cloud computing, streaming data analysis, agentic AI, runtime governance, coding-agent auditing, adaptive tracing"
+keywords: "software performance engineering, kernel tracing, system tracing, software debugging, observability, root-cause analysis, distributed systems, multicore systems, cloud computing, streaming data analysis, agentic AI, runtime governance, coding-agent auditing, adaptive tracing, research team, graduate students, PhD supervision, MSc supervision, research assistants"
 head-extra:
   - research-jsonld.html
 ---
@@ -56,9 +56,44 @@ Research projects and collaborations represented by this group include:
 
 The publication catalog is the canonical source for the complete set of papers, authors, technical summaries, and identifiers. For automated retrieval, start with the JSON catalog and its schema; use each paper's stable HTML page for the visible summary and evidence status, and use the linked DOI, preprint, BibTeX, RIS, APA, or IEEE record for citation details.
 
+### Current students and research trainees
+
+The roster below is based on my CV dated August 28, 2026. It includes ongoing supervision and 2026 research placements; roles and project status can change over time.
+
+#### Graduate students
+
+- **Haitham Al Satai** - PhD co-supervision at Polytechnique Montréal; thesis: *Adaptive Tracing for Efficient Performance Diagnosis in Distributed Systems* (January 2026 - present), co-supervised with Dr. Foutse Khomh.
+- **François Philippe Ossim Belias** - PhD co-supervision at Polytechnique Montréal; thesis: *Efficient Training of LLMs* (January 2025 - present), co-supervised with Dr. Foutse Khomh.
+- **Nurbek Imangazin** - PhD co-supervision at Brock University (September 2024 - present), co-supervised with Dr. Michael Winter.
+- **Yuvraj Sehgal** - MSc thesis supervision; thesis: *Generating Syntactic Data using Diffusion Models* (September 2025 - present).
+- **Sneh Patel** - MSc thesis supervision; thesis: *Dependency Graph Reasoning using Graph Neural Models* (September 2025 - present).
+- **Tom Wallace** - MSc thesis co-supervision at Brock University; thesis: *Optimizing Strategies for Enhancing Resource Efficiency in Transformers and Deep Learning Models* (September 2022 - present), co-supervised with Dr. Beatrice Ombuki-Berman.
+
+#### Undergraduate project students
+
+- **James Windjack** - 4F90 project supervision; ongoing, started September 2025.
+- **Ansh Shah** - 4F90 project supervision; ongoing, started September 2025.
+- **Shrey Atulkumar Patel** - 3P99 project supervision, 2026.
+- **Lauren Macdonald** - 3P99 project supervision, 2026.
+- **Spandan Bhattarai** - 3P99 project supervision, 2026.
+
+#### Research assistants
+
+- **Afrin Jubaida** - Research Assistant, *EDI-by-Design in the Age of AI* (started around February 2026).
+- **Flora Nah Asah** - Research Assistant, *EDI-by-Design in the Age of AI* (started around February 2026).
+- **Mahsa Jafaie Menarbazari** - Research Assistant, *EDI-by-Design in the Age of AI* (started around February 2026).
+- **Abhijeet Dhali** - Research Assistant on *EDI-by-Design in the Age of AI* and a Mitacs project with JOE (started around February 2026).
+- **Becky Kwok** - Research Assistant, Mitacs project with JOE (started around February 2026).
+
+#### 2026 Mitacs Globalink research interns
+
+- **Eman Chaudhary** - In-person intern, *Harnessing Large Language Models for Automated Software Log Understanding* (August 10 - October 23, 2026).
+- **Khaled Gardabbou** - In-person intern, *Intelligent Software Agents for Autonomous Monitoring and Repair* (July 6 - September 25, 2026).
+- **Muhammad Maaz Hamid** - In-person intern, *Intelligent Software Agents for Autonomous Monitoring and Repair* (August 7 - October 30, 2026).
+
 ### Research group members and collaborators
 
-The names below are retained from the research-group page as members and collaborators represented in the group's work. Roles and membership change over time; paper authorship should be checked in the publication catalog.
+The current supervision and research-trainee roster is listed above. The names below are additional group members and collaborators represented in the publication record; roles and membership change over time, and paper authorship should be checked in the publication catalog.
 
 * [Morteza Noferesti](https://www.linkedin.com/in/morteza-noferesti-a69862188/)
 * [Mehenika Akter](https://www.linkedin.com/in/mehenika)
@@ -67,7 +102,6 @@ The names below are retained from the research-group page as members and collabo
 * [Alireza Ezaz](https://www.linkedin.com/in/s-alireza-ezaz-93a0881b9/)
 * [Ghazal Khodabandeh](https://ghazalkhodabandeh.tilda.ws/)
 * Yue Guan
-* [Tom Wallace](https://www.linkedin.com/in/tom-wallace-597099196/)
 * [Raghav Bhardwaj](https://www.linkedin.com/in/raghav-bhardwaj-878067153/)
 * Tong Zhang
 * Riley VanDonge
