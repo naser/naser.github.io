@@ -2,7 +2,7 @@
 layout: page
 title: Research
 share-title: Research | THREADS Lab (Naser Ezzati-Jivan)
-share-description: THREADS Lab's research in software observability, tracing, performance engineering, trustworthy and agentic AI systems, and dependable heterogeneous systems, with an 89-paper structured publication catalog.
+share-description: THREADS Lab's research in software observability, tracing, performance engineering, trustworthy and agentic AI systems, and dependable heterogeneous systems, with a structured publication catalog.
 keywords: "software performance engineering, kernel tracing, system tracing, software debugging, observability, root-cause analysis, distributed systems, multicore systems, cloud computing, streaming data analysis, agentic AI, runtime governance, coding-agent auditing, adaptive tracing, research team, graduate students, PhD supervision, MSc supervision, research assistants"
 head-extra:
   - research-jsonld.html
@@ -25,7 +25,7 @@ The following links separate the human-facing profile from the machine-readable 
 
 ### Research publications
 
-The current catalog contains 89 canonical publication records. The list below is generated from that catalog, with the most recent publication years first. Each paper has a separate crawlable URL and links to a detailed record with technical summaries, keywords, identifiers, authoritative source links, and citation formats. The catalog distinguishes complete author abstracts from original catalog summaries and labels full-text evidence separately from abstract/metadata evidence.
+The list below is generated from the publication catalog, with the most recent publication years first. Each paper has a separate crawlable URL and links to a detailed record with technical summaries, keywords, identifiers, authoritative source links, and citation formats. The catalog distinguishes complete author abstracts from original catalog summaries and labels full-text evidence separately from abstract/metadata evidence.
 
 [Browse the searchable publication catalog](https://naser.github.io/research-publications/) · [Research topics](https://naser.github.io/research-publications/topics/index.html) · [Metadata repository](https://github.com/naser/research-publications)
 
