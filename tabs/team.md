@@ -54,7 +54,7 @@ Former graduate students, postdoctoral researchers, research associates, and und
 
 * Amir Haghshenas - PhD, Polytechnique Montréal, co-supervised with Dr. Michel Dagenais
 * [Masoumeh Nourollahi](https://www.linkedin.com/in/masoumeh-nourollahi-3ba5b536/) - PhD, Polytechnique Montréal, co-supervised with Dr. Michel Dagenais
-* **Tom Wallace** - MSc, co-supervised with Dr. Beatrice Ombuki-Berman
+* Tom Wallace - MSc, co-supervised with Dr. Beatrice Ombuki-Berman
 * Madeline Janecek - MSc
 * Tong Zhang - MSc
 * [Ghazal Khodabandeh](https://ghazalkhodabandeh.tilda.ws/) - MSc
