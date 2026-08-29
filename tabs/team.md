@@ -14,7 +14,7 @@ Associate Professor, Department of Computer Science, Brock University\
 
 Naser Ezzati-Jivan leads THREADS Lab. His research covers software observability, execution tracing, performance engineering, root-cause analysis, and the observability and governance of AI-driven systems. Before joining Brock, he was a postdoctoral fellow at Polytechnique Montréal and Ericsson Canada, and a research associate with the DORSAL lab at Polytechnique Montréal.
 
-[Full bio]({{ site.baseurl }}/tabs/bio/) · [Contact]({{ site.baseurl }}/tabs/contact/) · [Brock faculty profile](https://brocku.ca/mathematics-science/computer-science/faculty-staff/naser-ezzati-jivan/) · [Google Scholar](https://scholar.google.ca/citations?hl=en&user=sJWcLv8AAAAJ&view_op=list_works&sortby=pubdate) · [ORCID](https://orcid.org/0000-0003-1435-6297) · [LinkedIn](https://www.linkedin.com/in/naser-ezzati-jivan-71418724)
+[Contact]({{ site.baseurl }}/tabs/contact/) · [Brock faculty profile](https://brocku.ca/mathematics-science/computer-science/faculty-staff/naser-ezzati-jivan/) · [Google Scholar](https://scholar.google.ca/citations?hl=en&user=sJWcLv8AAAAJ&view_op=list_works&sortby=pubdate) · [ORCID](https://orcid.org/0000-0003-1435-6297) · [LinkedIn](https://www.linkedin.com/in/naser-ezzati-jivan-71418724)
 
 ### Current members (updated August 2026)
 
