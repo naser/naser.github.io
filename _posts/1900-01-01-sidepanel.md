@@ -9,7 +9,7 @@ canonical_url: "https://naser.github.io/"
 ![Naser]({{ site.baseurl }}/assets/img/naser.png){: width="100%" :}
 
 **Naser Ezzati-Jivan**\
-*PhD (University of Montreal)*\
+*PhD (Polytechnique Montréal)*\
 *MSc in Software Engineering (University of Isfahan)*\
 *BSc in Software Engineering (Sharif University of Technology)*\
 nezzati@brocku.ca

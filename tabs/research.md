@@ -2,13 +2,13 @@
 layout: page
 title: Research
 share-title: Research | THREADS Lab (Naser Ezzati-Jivan)
-share-description: THREADS Lab's research in software observability, tracing, performance engineering, trustworthy and agentic AI systems, dependable heterogeneous systems, and sustainability, with an 89-paper structured publication catalog.
+share-description: THREADS Lab's research in software observability, tracing, performance engineering, trustworthy and agentic AI systems, and dependable heterogeneous systems, with an 89-paper structured publication catalog.
 keywords: "software performance engineering, kernel tracing, system tracing, software debugging, observability, root-cause analysis, distributed systems, multicore systems, cloud computing, streaming data analysis, agentic AI, runtime governance, coding-agent auditing, adaptive tracing, research team, graduate students, PhD supervision, MSc supervision, research assistants"
 head-extra:
   - research-jsonld.html
 ---
 
-THREADS Lab is the research group of Naser Ezzati-Jivan, Associate Professor in the [Department of Computer Science at Brock University](https://brocku.ca/mathematics-science/computer-science/faculty-staff/naser-ezzati-jivan/). Our research focuses on software observability, tracing, performance engineering, trustworthy and agentic AI systems, dependable heterogeneous systems, and sustainability.
+THREADS Lab is the research group of Naser Ezzati-Jivan, Associate Professor in the [Department of Computer Science at Brock University](https://brocku.ca/mathematics-science/computer-science/faculty-staff/naser-ezzati-jivan/). Our research focuses on software observability, tracing, performance engineering, trustworthy and agentic AI systems, and dependable heterogeneous systems.
 
 We welcome inquiries from master's and PhD students, visiting researchers, postdoctoral fellows, and collaborators whose interests align with these areas. Please use the [Contact page]({{ site.baseurl }}/tabs/contact/) to get in touch.
 
@@ -16,7 +16,6 @@ We welcome inquiries from master's and PhD students, visiting researchers, postd
 
 The following links separate the human-facing profile from the machine-readable publication record:
 
-- [Research news and updates](https://naser.github.io/tabs/news/)
 - [Human-readable publication catalog](https://naser.github.io/research-publications/)
 - [Machine-readable JSON catalog](https://naser.github.io/research-publications/catalog.json)
 - [Catalog schema](https://naser.github.io/research-publications/schemas/paper.schema.json)
@@ -26,7 +25,7 @@ The following links separate the human-facing profile from the machine-readable 
 
 ### Recent research news
 
-The latest announcements cover software performance engineering, distributed and kernel tracing, observability, and the governance of agentic AI systems. See the [research news page](https://naser.github.io/tabs/news/) for the fuller chronological record.
+The latest announcements cover software performance engineering, distributed and kernel tracing, observability, and the governance of agentic AI systems. See the [home page]({{ site.baseurl }}/) for the fuller list of lab news.
 
 - **CASCON 2026 — paper accepted.** Our paper, **Beyond Agent Logs: Cross-Layer Execution Evidence for Auditing Coding Agents**, by Haitham Al Satai, Naser Ezzati-Jivan, and Foutse Khomh, has been accepted for the [CASCON 2026 technical-paper program](https://conf.researchr.org/track/cascon-2026/cascontechnical-papers2026). It examines cross-layer execution evidence for auditing coding-agent behavior.
 - **ACM FSE 2026 — agentic-AI governance briefing.** I co-presented [Taming the Stochastic Machine: Observability and Runtime Governance for Agentic AI Systems](https://conf.researchr.org/track/fse-2026/fse-2026-tutorials) with Maryam Ekhlasi. The official program lists this as a 90-minute technical briefing on observability and runtime governance for agentic AI systems.
@@ -67,63 +66,9 @@ Completed project:
 
 The publication catalog is the canonical source for the complete set of papers, authors, technical summaries, and identifiers. For automated retrieval, start with the JSON catalog and its schema; use each paper's stable HTML page for the visible summary and evidence status, and use the linked DOI, preprint, BibTeX, RIS, APA, or IEEE record for citation details.
 
-### Current members (updated August 2026)
+### Team
 
-This roster is based on my CV dated August 28, 2026.
-
-#### PhD students
-
-- **Afrin Jubaida** - Brock University; research area: *EDI-by-Design in the Age of AI*.
-- **Haitham Al Satai** - Polytechnique Montréal; thesis: *Adaptive Tracing for Efficient Performance Diagnosis in Distributed Systems* (January 2026 - present), co-supervised with Dr. Foutse Khomh.
-- **François Philippe Ossim Belias** - Polytechnique Montréal; thesis: *Efficient Training of LLMs* (January 2025 - present), co-supervised with Dr. Foutse Khomh.
-- **Nurbek Imangazin** - Brock University (September 2024 - present), co-supervised with Dr. Michael Winter.
-
-#### MSc students
-
-- **Yuvraj Sehgal** - thesis: *Generating Syntactic Data using Diffusion Models* (September 2025 - present).
-- **Sneh Patel** - thesis: *Dependency Graph Reasoning using Graph Neural Models* (September 2025 - present).
-
-#### Undergraduate researchers
-
-- **James Windjack** - 4F90 project, ongoing since September 2025.
-- **Ansh Shah** - 4F90 project, ongoing since September 2025.
-
-#### Research Assistants
-
-- **Flora Nah Asah** - EDI-by-Design in the Age of AI (started February 2026).
-- **Mahsa Jafaie Menarbazari** - EDI-by-Design in the Age of AI (started February 2026).
-- **Abhijeet Dhali** - EDI-by-Design in the Age of AI and the Mitacs project with JOE (started February 2026).
-- **Becky Kwok** - Mitacs project with JOE (started February 2026).
-
-#### Mitacs Globalink research interns (2026)
-
-- **Eman Chaudhary** - In-person intern, *Harnessing Large Language Models for Automated Software Log Understanding* (August 10 - October 23, 2026).
-- **Khaled Gardabbou** - In-person intern, *Intelligent Software Agents for Autonomous Monitoring and Repair* (July 6 - September 25, 2026).
-- **Muhammad Maaz Hamid** - In-person intern, *Intelligent Software Agents for Autonomous Monitoring and Repair* (August 7 - October 30, 2026).
-
-### Alumni
-
-Former graduate students, postdoctoral researchers, research associates, and undergraduate researchers. Roles reflect the position held while at THREADS Lab; paper authorship should be checked in the publication catalog.
-
-* Amir Haghshenas - PhD, Polytechnique Montréal, co-supervised with Dr. Michel Dagenais
-* [Masoumeh Nourollahi](https://www.linkedin.com/in/masoumeh-nourollahi-3ba5b536/) - PhD, Polytechnique Montréal, co-supervised with Dr. Michel Dagenais
-* **Tom Wallace** - MSc, co-supervised with Dr. Beatrice Ombuki-Berman
-* Madeline Janecek - MSc
-* Tong Zhang - MSc
-* [Ghazal Khodabandeh](https://ghazalkhodabandeh.tilda.ws/) - MSc
-* [Alireza Ezaz](https://www.linkedin.com/in/s-alireza-ezaz-93a0881b9/) - MSc
-* [Mehenika Akter](https://www.linkedin.com/in/mehenika) - MSc
-* [Pranjal Chakraborty](https://pranjal.net/) - MSc
-* [Dipanzan Islam](https://www.linkedin.com/in/dipanzan-islam-583131178/) - MSc
-* [Amirmahdi Khosravi Tabrizi](https://www.linkedin.com/in/amirmahdi-khosravi/) - MSc
-* [Mohammed Adib Khan](https://www.linkedin.com/in/mohammedadibkhan/) - MSc
-* Yue Guan - MSc
-* [Morteza Noferesti](https://www.linkedin.com/in/morteza-noferesti-a69862188/) - Postdoctoral Researcher
-* Kasra Darvishi - Research Associate
-* [Raghav Bhardwaj](https://www.linkedin.com/in/raghav-bhardwaj-878067153/) - Undergraduate researcher
-* Riley VanDonge - Undergraduate researcher
-
-Plus dozens of additional undergraduate research students (3P99, co-op, and 4F90 projects) since 2019.
+THREADS Lab currently includes PhD and MSc students, undergraduate researchers, research assistants, and Mitacs Globalink interns. See the [Team page]({{ site.baseurl }}/tabs/team/) for the full roster of current members and alumni.
 
 ### Research publications
 

@@ -25,7 +25,7 @@ title: Complete Bio
   
 * Ph.D. in Computer Engineering\
   2010 - 2014\
-  Department of Computer and Software Engineering, University of Montreal, Canada\
+  Department of Computer and Software Engineering, Polytechnique Montréal, Canada\
   *Thesis: “Multi-level Trace Abstraction, Linking and Display”, Supervisor: Prof. Michel Dagenais*
             
 * M.Sc. in Computer Engineering, Software\
