@@ -73,3 +73,25 @@
 @media (max-width: 480px) {
   .team-grid { grid-template-columns: 1fr; }
 }
+
+/* ---- Principal investigator block: text left, portrait right ---- */
+.pi-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 26px;
+  margin-bottom: 8px;
+}
+.pi-text { flex: 1 1 auto; min-width: 0; }
+.pi-text > p:first-child { margin-top: 0; }
+.pi-photo { flex: 0 0 auto; width: 210px; }
+.pi-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #e1e4e8;
+}
+
+@media (max-width: 700px) {
+  .pi-block { flex-direction: column; gap: 16px; }
+  .pi-photo { width: 190px; align-self: flex-start; order: -1; }
+}

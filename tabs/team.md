@@ -8,13 +8,18 @@ keywords: "THREADS Lab team, Naser Ezzati-Jivan, Brock University, PhD students,
 
 ### Principal Investigator
 
-**Naser Ezzati-Jivan**\
-Associate Professor, Department of Computer Science, Brock University\
-*PhD, Polytechnique Montréal · MSc, University of Isfahan · BSc, Sharif University of Technology*
-
-Naser Ezzati-Jivan leads THREADS Lab. His research covers software observability, execution tracing, performance engineering, root-cause analysis, and the observability and governance of AI-driven systems. Before joining Brock, he was a postdoctoral fellow at Polytechnique Montréal and Ericsson Canada, and a research associate with the DORSAL lab at Polytechnique Montréal.
-
-[Contact]({{ site.baseurl }}/tabs/contact/) · [Brock faculty profile](https://brocku.ca/mathematics-science/computer-science/faculty-staff/naser-ezzati-jivan/) · [Google Scholar](https://scholar.google.ca/citations?hl=en&user=sJWcLv8AAAAJ&view_op=list_works&sortby=pubdate) · [ORCID](https://orcid.org/0000-0003-1435-6297) · [LinkedIn](https://www.linkedin.com/in/naser-ezzati-jivan-71418724)
+<div class="pi-block" markdown="0">
+  <div class="pi-text">
+    <p><strong>Naser Ezzati-Jivan</strong><br>
+    Associate Professor, Department of Computer Science, Brock University<br>
+    <em>PhD, Polytechnique Montréal · MSc, University of Isfahan · BSc, Sharif University of Technology</em></p>
+    <p>Naser Ezzati-Jivan leads THREADS Lab. His research covers software observability, execution tracing, performance engineering, root-cause analysis, and the observability and governance of AI-driven systems. Before joining Brock, he was a postdoctoral fellow at Polytechnique Montréal and Ericsson Canada, and a research associate with the DORSAL lab at Polytechnique Montréal.</p>
+    <p><a href="{{ site.baseurl }}/tabs/contact/">Contact</a> · <a href="https://brocku.ca/mathematics-science/computer-science/faculty-staff/naser-ezzati-jivan/">Brock faculty profile</a> · <a href="https://scholar.google.ca/citations?hl=en&amp;user=sJWcLv8AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Google Scholar</a> · <a href="https://orcid.org/0000-0003-1435-6297">ORCID</a> · <a href="https://www.linkedin.com/in/naser-ezzati-jivan-71418724">LinkedIn</a></p>
+  </div>
+  <div class="pi-photo">
+    <img src="{{ site.baseurl }}/assets/img/naser-2026.jpg" alt="Naser Ezzati-Jivan, Principal Investigator">
+  </div>
+</div>
 
 ### Current members
 
