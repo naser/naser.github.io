@@ -15,3 +15,61 @@
   font-size: 0.85em;
   opacity: 0.8;
 }
+
+/* ---- Team member cards ---- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 18px 0 34px;
+}
+.member-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 15px 16px;
+  border: 1px solid #e1e4e8;
+  border-radius: 10px;
+  background: #fff;
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+.member-card:hover {
+  border-color: #3A6A74;
+  box-shadow: 0 6px 18px rgba(20, 24, 29, .07);
+}
+.member-avatar {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #3A6A74;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.member-card.is-alum .member-avatar { background: #6b7a82; }
+.member-body { min-width: 0; }
+.member-name {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.25;
+  margin: 0 0 3px;
+}
+.member-name a { text-decoration: none; }
+.member-name a:hover { text-decoration: underline; }
+.member-role {
+  font-size: 12.5px;
+  color: #5b6470;
+  line-height: 1.45;
+  margin: 0;
+}
+.member-role em { font-style: italic; }
+
+@media (max-width: 480px) {
+  .team-grid { grid-template-columns: 1fr; }
+}
