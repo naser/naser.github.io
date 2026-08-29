@@ -1,0 +1,17 @@
+/* THREADS Lab custom styles */
+
+/* Small, understated separators inside the T.H.R.E.A.D.S. wordmark */
+.acronym-dot {
+  font-size: 0.32em;
+  opacity: 0.55;
+  vertical-align: middle;
+  margin: 0 0.02em;
+}
+
+/* Second (smaller) line under the main subtitle in the page header */
+.subheading-secondary {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.85em;
+  opacity: 0.8;
+}
