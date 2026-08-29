@@ -48,10 +48,14 @@ My research includes:
 
 ### Projects and collaborations
 
-Research projects and collaborations represented by this group include:
+Active projects and collaborations represented by this group include:
 
-* **Adaptive Execution Tracing and Logging for Resource-Constrained Systems** — a Mitacs/NSERC-supported research direction.
-* **Power Efficiency of Software Systems for Smart Drones** — a VPMI/FedDev/Bornea Dynamics-supported research direction.
+* **EDI-by-Design in the Age of AI: A Co-Created Framework and Decision Support Tool for Inclusive Research Planning** — an NSERC Dimensions Canada project with Naser Ezzati-Jivan as PI, in partnership with the University of Ottawa and with Paria Shirani, Anteneh W. Ayanso, and Leila Tahmooresnejad.
+* **RapidBOM: Multimodal Document AI and Privacy-Preserving Knowledge Graphs for Engineering Sourcing** — a Mitacs Accelerate project with JOE, with Naser Ezzati-Jivan as academic supervisor (PI).
+* **Multi-Level Adaptive Tracing for Enhancing Software Reliability and Performance** — a Mitacs Business Strategy Internship (BSI) project with Ciena Corporation, with Naser Ezzati-Jivan as academic supervisor (PI).
+
+Completed project:
+
 * **Canada Games software project** — a completed Niagara 2022 project described in the [official Brock News article](https://brocku.ca/brock-news/2022/05/canada-games-teaching-spotlight-computer-science-students-developing-canada-games-chatbot/).
 
 The publication catalog is the canonical source for the complete set of papers, authors, technical summaries, and identifiers. For automated retrieval, start with the JSON catalog and its schema; use each paper's stable HTML page for the visible summary and evidence status, and use the linked DOI, preprint, BibTeX, RIS, APA, or IEEE record for citation details.
@@ -71,7 +75,7 @@ This roster is based on my CV dated August 28, 2026, with supervision roles clar
 - **Haitham Al Satai** - PhD co-supervision at Polytechnique Montréal; thesis: *Adaptive Tracing for Efficient Performance Diagnosis in Distributed Systems* (January 2026 - present), co-supervised with Dr. Foutse Khomh.
 - **François Philippe Ossim Belias** - PhD co-supervision at Polytechnique Montréal; thesis: *Efficient Training of LLMs* (January 2025 - present), co-supervised with Dr. Foutse Khomh.
 - **Nurbek Imangazin** - PhD co-supervision at Brock University (September 2024 - present), co-supervised with Dr. Michael Winter.
-- **Tom Wallace** - MSc thesis co-supervision at Brock University; thesis: *Optimizing Strategies for Enhancing Resource Efficiency in Transformers and Deep Learning Models* (September 2022 - present), co-supervised with Dr. Beatrice Ombuki-Berman.
+
 
 #### Undergraduate project students
 
@@ -104,6 +108,7 @@ The current supervision and research-trainee roster is listed above. The names b
 
 #### Previous members
 
+* **Tom Wallace** - Former MSc thesis co-supervision at Brock University; thesis: *Optimizing Strategies for Enhancing Resource Efficiency in Transformers and Deep Learning Models*, co-supervised with Dr. Beatrice Ombuki-Berman (graduated).
 * [Amirmahdi Khosravi Tabrizi](https://www.linkedin.com/in/amirmahdi-khosravi/)
 * [Pranjal Chakraborty](https://pranjal.net/)
 * [Dipanzan Islam](https://www.linkedin.com/in/dipanzan-islam-583131178/)
