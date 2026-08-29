@@ -173,14 +173,14 @@ Former graduate students, postdoctoral researchers, research associates, and und
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar" aria-hidden="true">MN</div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/masoumeh.jpg" alt="Masoumeh Nourollahi"></div>
     <div class="member-body">
       <p class="member-name"><a href="https://www.linkedin.com/in/masoumeh-nourollahi-3ba5b536/">Masoumeh Nourollahi</a></p>
       <p class="member-role">PhD, Polytechnique Montréal<br>Co-supervised with Dr. Michel Dagenais</p>
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar" aria-hidden="true">TW</div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/tom.png" alt="Tom Wallace"></div>
     <div class="member-body">
       <p class="member-name">Tom Wallace</p>
       <p class="member-role">MSc · Co-supervised with Dr. Beatrice Ombuki-Berman</p>
@@ -201,49 +201,49 @@ Former graduate students, postdoctoral researchers, research associates, and und
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar" aria-hidden="true">GK</div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/ghazal.png" alt="Ghazal Khodabandeh"></div>
     <div class="member-body">
       <p class="member-name"><a href="https://ghazalkhodabandeh.tilda.ws/">Ghazal Khodabandeh</a></p>
       <p class="member-role">MSc</p>
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar" aria-hidden="true">AE</div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/alireza.png" alt="Alireza Ezaz"></div>
     <div class="member-body">
       <p class="member-name"><a href="https://www.linkedin.com/in/s-alireza-ezaz-93a0881b9/">Alireza Ezaz</a></p>
       <p class="member-role">MSc</p>
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar" aria-hidden="true">MA</div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/mehenika.jpg" alt="Mehenika Akter"></div>
     <div class="member-body">
       <p class="member-name"><a href="https://www.linkedin.com/in/mehenika">Mehenika Akter</a></p>
       <p class="member-role">MSc</p>
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar" aria-hidden="true">PC</div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/pranjal.jpeg" alt="Pranjal Chakraborty"></div>
     <div class="member-body">
       <p class="member-name"><a href="https://pranjal.net/">Pranjal Chakraborty</a></p>
       <p class="member-role">MSc</p>
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar" aria-hidden="true">DI</div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/dipanzan.jpg" alt="Dipanzan Islam"></div>
     <div class="member-body">
       <p class="member-name"><a href="https://www.linkedin.com/in/dipanzan-islam-583131178/">Dipanzan Islam</a></p>
       <p class="member-role">MSc</p>
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar" aria-hidden="true">AK</div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/amir.jpg" alt="Amirmahdi Khosravi Tabrizi"></div>
     <div class="member-body">
       <p class="member-name"><a href="https://www.linkedin.com/in/amirmahdi-khosravi/">Amirmahdi Khosravi Tabrizi</a></p>
       <p class="member-role">MSc</p>
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar" aria-hidden="true">MK</div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/adib.png" alt="Mohammed Adib Khan"></div>
     <div class="member-body">
       <p class="member-name"><a href="https://www.linkedin.com/in/mohammedadibkhan/">Mohammed Adib Khan</a></p>
       <p class="member-role">MSc</p>
@@ -278,7 +278,7 @@ Former graduate students, postdoctoral researchers, research associates, and und
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar" aria-hidden="true">RV</div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/riley.jpg" alt="Riley VanDonge"></div>
     <div class="member-body">
       <p class="member-name">Riley VanDonge</p>
       <p class="member-role">Undergraduate researcher</p>
