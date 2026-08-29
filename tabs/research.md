@@ -3,7 +3,7 @@ layout: page
 title: Research
 share-title: Research and publications | Naser Ezzati-Jivan
 share-description: Research in software performance engineering, kernel and system tracing, observability, debugging, distributed and multicore systems, cloud computing, and streaming data analysis, with an 89-paper structured publication catalog.
-keywords: "software performance engineering, kernel tracing, system tracing, software debugging, observability, root-cause analysis, distributed systems, multicore systems, cloud computing, streaming data analysis"
+keywords: "software performance engineering, kernel tracing, system tracing, software debugging, observability, root-cause analysis, distributed systems, multicore systems, cloud computing, streaming data analysis, agentic AI, runtime governance, coding-agent auditing, adaptive tracing"
 head-extra:
   - research-jsonld.html
 ---
@@ -23,6 +23,16 @@ The following links separate the human-facing profile from the machine-readable 
 - [Catalog discovery guide](https://naser.github.io/research-publications/llms.txt)
 - [Metadata repository](https://github.com/naser/research-publications)
 - [ORCID](https://orcid.org/0000-0003-1435-6297) and [Google Scholar](https://scholar.google.com/citations?user=sJWcLv8AAAAJ&hl=en)
+
+### Recent research news
+
+The latest announcements cover software performance engineering, distributed and kernel tracing, observability, and the governance of agentic AI systems. See the [research news page](https://naser.github.io/tabs/news/) for the fuller chronological record.
+
+- **CASCON 2026 — paper accepted.** Our paper, **Beyond Agent Logs: Cross-Layer Execution Evidence for Auditing Coding Agents**, by Haitham Al Satai, Naser Ezzati-Jivan, and Foutse Khomh, has been accepted for the [CASCON 2026 technical-paper program](https://conf.researchr.org/track/cascon-2026/cascontechnical-papers2026). It examines cross-layer execution evidence for auditing coding-agent behavior.
+- **ACM FSE 2026 — agentic-AI governance briefing.** I co-presented [Taming the Stochastic Machine: Observability and Runtime Governance for Agentic AI Systems](https://conf.researchr.org/track/fse-2026/fse-2026-tutorials) with Maryam Ekhlasi. The official program lists this as a 90-minute technical briefing on observability and runtime governance for agentic AI systems.
+- **DTraComp — Journal of Systems and Software.** [DTraComp: Comparing distributed execution traces for understanding intermittent latency sources](https://doi.org/10.1016/j.jss.2026.112990) presents an open-source framework for comparing distributed execution traces and connecting request-level latency to thread-level kernel evidence.
+- **LMAT — Journal of Systems and Software.** [LMAT: An adaptive tracing approach based on efficient system behavior analysis using language models](https://doi.org/10.1016/j.jss.2026.112890) introduces adaptive tracing that uses language models to tune tracing granularity from observed system behavior.
+- **CARE — ACM FSE 2026 Journal-First.** [CARE: Context Aware Root Cause Identification Using Distributed Traces and Profiling Metrics](https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/32/CARE-Context-Aware-Root-Cause-Identification-Using-Distributed-Traces-and-Profiling-) integrates distributed traces and profiling metrics for context-aware root-cause identification and was featured in the [FSE 2026 Journal-First program](https://conf.researchr.org/track/fse-2026/fse-2026-journal-first).
 
 ### Research directions
 
