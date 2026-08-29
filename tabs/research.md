@@ -56,17 +56,21 @@ Research projects and collaborations represented by this group include:
 
 The publication catalog is the canonical source for the complete set of papers, authors, technical summaries, and identifiers. For automated retrieval, start with the JSON catalog and its schema; use each paper's stable HTML page for the visible summary and evidence status, and use the linked DOI, preprint, BibTeX, RIS, APA, or IEEE record for citation details.
 
-### Current students and research trainees
+### Current students and interns (updated August 2026)
 
-The roster below is based on my CV dated August 28, 2026. It includes ongoing supervision and 2026 research placements; roles and project status can change over time.
+This roster is based on my CV dated August 28, 2026, with supervision roles clarified below. It includes current direct supervision, co-supervision, active undergraduate project students, and 2026 research interns.
 
-#### Graduate students
+#### Directly supervised graduate students
+
+- **Afrin Jubaida** - PhD student under my direct supervision; research area: *EDI-by-Design in the Age of AI*.
+- **Yuvraj Sehgal** - MSc thesis student under my direct supervision; thesis: *Generating Syntactic Data using Diffusion Models* (September 2025 - present).
+- **Sneh Patel** - MSc thesis student under my direct supervision; thesis: *Dependency Graph Reasoning using Graph Neural Models* (September 2025 - present).
+
+#### Co-supervised graduate students
 
 - **Haitham Al Satai** - PhD co-supervision at Polytechnique Montréal; thesis: *Adaptive Tracing for Efficient Performance Diagnosis in Distributed Systems* (January 2026 - present), co-supervised with Dr. Foutse Khomh.
 - **François Philippe Ossim Belias** - PhD co-supervision at Polytechnique Montréal; thesis: *Efficient Training of LLMs* (January 2025 - present), co-supervised with Dr. Foutse Khomh.
 - **Nurbek Imangazin** - PhD co-supervision at Brock University (September 2024 - present), co-supervised with Dr. Michael Winter.
-- **Yuvraj Sehgal** - MSc thesis supervision; thesis: *Generating Syntactic Data using Diffusion Models* (September 2025 - present).
-- **Sneh Patel** - MSc thesis supervision; thesis: *Dependency Graph Reasoning using Graph Neural Models* (September 2025 - present).
 - **Tom Wallace** - MSc thesis co-supervision at Brock University; thesis: *Optimizing Strategies for Enhancing Resource Efficiency in Transformers and Deep Learning Models* (September 2022 - present), co-supervised with Dr. Beatrice Ombuki-Berman.
 
 #### Undergraduate project students
@@ -77,15 +81,7 @@ The roster below is based on my CV dated August 28, 2026. It includes ongoing su
 - **Lauren Macdonald** - 3P99 project supervision, 2026.
 - **Spandan Bhattarai** - 3P99 project supervision, 2026.
 
-#### Research assistants
-
-- **Afrin Jubaida** - Research Assistant, *EDI-by-Design in the Age of AI* (started around February 2026).
-- **Flora Nah Asah** - Research Assistant, *EDI-by-Design in the Age of AI* (started around February 2026).
-- **Mahsa Jafaie Menarbazari** - Research Assistant, *EDI-by-Design in the Age of AI* (started around February 2026).
-- **Abhijeet Dhali** - Research Assistant on *EDI-by-Design in the Age of AI* and a Mitacs project with JOE (started around February 2026).
-- **Becky Kwok** - Research Assistant, Mitacs project with JOE (started around February 2026).
-
-#### 2026 Mitacs Globalink research interns
+#### Mitacs Globalink research interns (2026)
 
 - **Eman Chaudhary** - In-person intern, *Harnessing Large Language Models for Automated Software Log Understanding* (August 10 - October 23, 2026).
 - **Khaled Gardabbou** - In-person intern, *Intelligent Software Agents for Autonomous Monitoring and Repair* (July 6 - September 25, 2026).
