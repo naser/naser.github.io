@@ -68,6 +68,13 @@ Naser Ezzati-Jivan leads THREADS Lab. His research covers software observability
       <p class="member-role">since Sep 2025<br><em>Dependency Graph Reasoning using Graph Neural Models</em></p>
     </div>
   </div>
+  <div class="member-card">
+    <div class="member-avatar" aria-hidden="true">CG</div>
+    <div class="member-body">
+      <p class="member-name">Charmvir Grewal</p>
+      <p class="member-role">Brock University</p>
+    </div>
+  </div>
 </div>
 
 #### Undergraduate researchers
