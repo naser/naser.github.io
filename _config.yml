@@ -10,14 +10,14 @@
 ############################
 
 # Name of website
-title: "Naser Ezzati-Jivan"
+title: "THREADS Lab"
 
 # Your name to show in the footer
 author: Naser Ezzati-Jivan
 
 baseurl: ""
 url: "https://naser.github.io"
-description: "Associate Professor of Computer Science at Brock University researching software performance engineering, kernel and system tracing, observability, software debugging, distributed and multicore systems, cloud computing, and streaming data analysis."
+description: "THREADS Lab is the research group of Naser Ezzati-Jivan, Associate Professor of Computer Science at Brock University, working on software observability, tracing, performance engineering, trustworthy and agentic AI systems, dependable heterogeneous systems, and sustainability."
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -55,7 +55,7 @@ remove-ads: true
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "naser@brocku.ca"
+  email: "nezzati@brocku.ca"
   # rss: true  # remove this line if you don't want to show an RSS link at the bottom
   # facebook: deanattali
   github: naser
@@ -144,16 +144,16 @@ keywords: "Naser Ezzati-Jivan, Brock University, software performance engineerin
 # footer-hover-col: "#FFFF00"
 
 navbar-col: "#FFFFFF"
-navbar-text-col: "#404040"
-navbar-border-col: "#DDDDDD"
+navbar-text-col: "#3A4552"
+navbar-border-col: "#E1E4E8"
 page-col: "#FFFFFF"
-text-col: "#404040"
-link-col: "#03a7dd"
-hover-col: "EBEBEB"
+text-col: "#14181D"
+link-col: "#3A6A74"
+hover-col: "E8EEF0"
 footer-col: "#FFFFFF"
-footer-text-col: "#404040"
-footer-link-col: "#03a7dd"
-footer-hover-col: "EBEBEB"
+footer-text-col: "#3A4552"
+footer-link-col: "#3A6A74"
+footer-hover-col: "E8EEF0"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour

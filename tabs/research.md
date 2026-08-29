@@ -1,16 +1,16 @@
 ---
 layout: page
 title: Research
-share-title: Research and publications | Naser Ezzati-Jivan
-share-description: Research in software performance engineering, kernel and system tracing, observability, debugging, distributed and multicore systems, cloud computing, and streaming data analysis, with an 89-paper structured publication catalog.
+share-title: Research | THREADS Lab (Naser Ezzati-Jivan)
+share-description: THREADS Lab's research in software observability, tracing, performance engineering, trustworthy and agentic AI systems, dependable heterogeneous systems, and sustainability, with an 89-paper structured publication catalog.
 keywords: "software performance engineering, kernel tracing, system tracing, software debugging, observability, root-cause analysis, distributed systems, multicore systems, cloud computing, streaming data analysis, agentic AI, runtime governance, coding-agent auditing, adaptive tracing, research team, graduate students, PhD supervision, MSc supervision, research assistants"
 head-extra:
   - research-jsonld.html
 ---
 
-I am an Associate Professor in the [Department of Computer Science at Brock University](https://brocku.ca/mathematics-science/computer-science/faculty-staff/naser-ezzati-jivan/). My research focuses on software performance engineering, software analysis and debugging, operating-system tracing and profiling, observability, and distributed systems.
+THREADS Lab is the research group of Naser Ezzati-Jivan, Associate Professor in the [Department of Computer Science at Brock University](https://brocku.ca/mathematics-science/computer-science/faculty-staff/naser-ezzati-jivan/). Our research focuses on software observability, tracing, performance engineering, trustworthy and agentic AI systems, dependable heterogeneous systems, and sustainability.
 
-I welcome inquiries from master's and PhD students, visiting researchers, postdoctoral fellows, and collaborators whose interests align with these areas. Please use the [Contact page]({{ site.baseurl }}/tabs/contact/) to get in touch.
+We welcome inquiries from master's and PhD students, visiting researchers, postdoctoral fellows, and collaborators whose interests align with these areas. Please use the [Contact page]({{ site.baseurl }}/tabs/contact/) to get in touch.
 
 ### Research resources
 
@@ -36,23 +36,30 @@ The latest announcements cover software performance engineering, distributed and
 
 ### Research directions
 
-My research includes:
+THREADS Lab's work sits in three connected pillars. Current projects are listed under each; some pillars also include broader standing research directions that are not tied to a single named project.
 
-* software debugging and monitoring;
-* software and system performance engineering;
-* kernel-level and operating-system execution tracing and profiling;
-* performance analysis and root-cause localization;
-* distributed, multicore, cloud, and virtualized systems;
-* observability and streaming data analysis; and
-* energy-aware analysis of software systems.
+**1. Software observability, tracing & performance engineering**
 
-### Projects and collaborations
+Adaptive, multilevel tracing and root-cause methods spanning application code down to kernel and hardware evidence, plus distributed, multicore, cloud, and virtualized systems more broadly.
 
-Active projects and collaborations represented by this group include:
+* **Multi-Level Adaptive Tracing for Enhancing Software Reliability and Performance** — Mitacs Business Strategy Internship (BSI), with Ciena Corporation. Naser Ezzati-Jivan, academic supervisor (PI).
+* **Observability Compensation Paradigm: Leveraging Adaptive Execution Tracing and Analysis** — NSERC Discovery Grant. Naser Ezzati-Jivan, PI.
 
-* **EDI-by-Design in the Age of AI: A Co-Created Framework and Decision Support Tool for Inclusive Research Planning** — an NSERC Dimensions Canada project with Naser Ezzati-Jivan as PI, in partnership with the University of Ottawa and with Paria Shirani, Anteneh W. Ayanso, and Leila Tahmooresnejad.
-* **RapidBOM: Multimodal Document AI and Privacy-Preserving Knowledge Graphs for Engineering Sourcing** — a Mitacs Accelerate project with JOE, with Naser Ezzati-Jivan as academic supervisor (PI).
-* **Multi-Level Adaptive Tracing for Enhancing Software Reliability and Performance** — a Mitacs Business Strategy Internship (BSI) project with Ciena Corporation, with Naser Ezzati-Jivan as academic supervisor (PI).
+**2. Trustworthy & agentic AI systems**
+
+Making AI-driven and agentic software systems observable, auditable, and fair, including EDI-by-design approaches to inclusive AI research practice.
+
+* **EDI-by-Design in the Age of AI: A Co-Created Framework and Decision Support Tool for Inclusive Research Planning** — NSERC Dimensions Canada, SSHRC Insight Development, and Match of Minds. Naser Ezzati-Jivan, PI, in partnership with the University of Ottawa.
+* **RapidBOM: Multimodal Document AI and Privacy-Preserving Knowledge Graphs for Engineering Sourcing** — Mitacs Accelerate, with JOE. Naser Ezzati-Jivan, academic supervisor (PI).
+* **Intelligent Software Agents for Autonomous Monitoring and Repair** — Mitacs Globalink Research Internship.
+* **Harnessing Large Language Models for Automated Software Log Understanding** — Mitacs Globalink Research Internship.
+
+**3. Heterogeneous execution & embodied/physical systems**
+
+Extending observability beyond conventional software boundaries into heterogeneous hardware and the physical world; this pillar is the newest and most exploratory of the three.
+
+* **Observability and benchmarking for AI inference on heterogeneous hardware** — ongoing project.
+* Observability and energy-usage analysis for physical AI platforms, including robots, drones, and other embodied systems.
 
 Completed project:
 
@@ -60,30 +67,33 @@ Completed project:
 
 The publication catalog is the canonical source for the complete set of papers, authors, technical summaries, and identifiers. For automated retrieval, start with the JSON catalog and its schema; use each paper's stable HTML page for the visible summary and evidence status, and use the linked DOI, preprint, BibTeX, RIS, APA, or IEEE record for citation details.
 
-### Current students and interns (updated August 2026)
+### Current members (updated August 2026)
 
-This roster is based on my CV dated August 28, 2026, with supervision roles clarified below. It includes current direct supervision, co-supervision, active undergraduate project students, and 2026 research interns.
+This roster is based on my CV dated August 28, 2026.
 
-#### Directly supervised graduate students
+#### PhD students
 
-- **Afrin Jubaida** - PhD student under my direct supervision; research area: *EDI-by-Design in the Age of AI*.
-- **Yuvraj Sehgal** - MSc thesis student under my direct supervision; thesis: *Generating Syntactic Data using Diffusion Models* (September 2025 - present).
-- **Sneh Patel** - MSc thesis student under my direct supervision; thesis: *Dependency Graph Reasoning using Graph Neural Models* (September 2025 - present).
+- **Afrin Jubaida** - Brock University; research area: *EDI-by-Design in the Age of AI*.
+- **Haitham Al Satai** - Polytechnique Montréal; thesis: *Adaptive Tracing for Efficient Performance Diagnosis in Distributed Systems* (January 2026 - present), co-supervised with Dr. Foutse Khomh.
+- **François Philippe Ossim Belias** - Polytechnique Montréal; thesis: *Efficient Training of LLMs* (January 2025 - present), co-supervised with Dr. Foutse Khomh.
+- **Nurbek Imangazin** - Brock University (September 2024 - present), co-supervised with Dr. Michael Winter.
 
-#### Co-supervised graduate students
+#### MSc students
 
-- **Haitham Al Satai** - PhD co-supervision at Polytechnique Montréal; thesis: *Adaptive Tracing for Efficient Performance Diagnosis in Distributed Systems* (January 2026 - present), co-supervised with Dr. Foutse Khomh.
-- **François Philippe Ossim Belias** - PhD co-supervision at Polytechnique Montréal; thesis: *Efficient Training of LLMs* (January 2025 - present), co-supervised with Dr. Foutse Khomh.
-- **Nurbek Imangazin** - PhD co-supervision at Brock University (September 2024 - present), co-supervised with Dr. Michael Winter.
+- **Yuvraj Sehgal** - thesis: *Generating Syntactic Data using Diffusion Models* (September 2025 - present).
+- **Sneh Patel** - thesis: *Dependency Graph Reasoning using Graph Neural Models* (September 2025 - present).
 
+#### Undergraduate researchers
 
-#### Undergraduate project students
+- **James Windjack** - 4F90 project, ongoing since September 2025.
+- **Ansh Shah** - 4F90 project, ongoing since September 2025.
 
-- **James Windjack** - 4F90 project supervision; ongoing, started September 2025.
-- **Ansh Shah** - 4F90 project supervision; ongoing, started September 2025.
-- **Shrey Atulkumar Patel** - 3P99 project supervision, 2026.
-- **Lauren Macdonald** - 3P99 project supervision, 2026.
-- **Spandan Bhattarai** - 3P99 project supervision, 2026.
+#### Research Assistants
+
+- **Flora Nah Asah** - EDI-by-Design in the Age of AI (started February 2026).
+- **Mahsa Jafaie Menarbazari** - EDI-by-Design in the Age of AI (started February 2026).
+- **Abhijeet Dhali** - EDI-by-Design in the Age of AI and the Mitacs project with JOE (started February 2026).
+- **Becky Kwok** - Mitacs project with JOE (started February 2026).
 
 #### Mitacs Globalink research interns (2026)
 
@@ -91,28 +101,29 @@ This roster is based on my CV dated August 28, 2026, with supervision roles clar
 - **Khaled Gardabbou** - In-person intern, *Intelligent Software Agents for Autonomous Monitoring and Repair* (July 6 - September 25, 2026).
 - **Muhammad Maaz Hamid** - In-person intern, *Intelligent Software Agents for Autonomous Monitoring and Repair* (August 7 - October 30, 2026).
 
-### Research group members and collaborators
+### Alumni
 
-The current supervision and research-trainee roster is listed above. The names below are additional group members and collaborators represented in the publication record; roles and membership change over time, and paper authorship should be checked in the publication catalog.
+Former graduate students, postdoctoral researchers, research associates, and undergraduate researchers. Roles reflect the position held while at THREADS Lab; paper authorship should be checked in the publication catalog.
 
-* [Morteza Noferesti](https://www.linkedin.com/in/morteza-noferesti-a69862188/)
-* [Mehenika Akter](https://www.linkedin.com/in/mehenika)
-* Madeline Janecek
-* [Masoumeh Nourollahi](https://www.linkedin.com/in/masoumeh-nourollahi-3ba5b536/)
-* [Alireza Ezaz](https://www.linkedin.com/in/s-alireza-ezaz-93a0881b9/)
-* [Ghazal Khodabandeh](https://ghazalkhodabandeh.tilda.ws/)
-* Yue Guan
-* [Raghav Bhardwaj](https://www.linkedin.com/in/raghav-bhardwaj-878067153/)
-* Tong Zhang
-* Riley VanDonge
+* Amir Haghshenas - PhD, Polytechnique Montréal, co-supervised with Dr. Michel Dagenais
+* [Masoumeh Nourollahi](https://www.linkedin.com/in/masoumeh-nourollahi-3ba5b536/) - PhD, Polytechnique Montréal, co-supervised with Dr. Michel Dagenais
+* **Tom Wallace** - MSc, co-supervised with Dr. Beatrice Ombuki-Berman
+* Madeline Janecek - MSc
+* Tong Zhang - MSc
+* [Ghazal Khodabandeh](https://ghazalkhodabandeh.tilda.ws/) - MSc
+* [Alireza Ezaz](https://www.linkedin.com/in/s-alireza-ezaz-93a0881b9/) - MSc
+* [Mehenika Akter](https://www.linkedin.com/in/mehenika) - MSc
+* [Pranjal Chakraborty](https://pranjal.net/) - MSc
+* [Dipanzan Islam](https://www.linkedin.com/in/dipanzan-islam-583131178/) - MSc
+* [Amirmahdi Khosravi Tabrizi](https://www.linkedin.com/in/amirmahdi-khosravi/) - MSc
+* [Mohammed Adib Khan](https://www.linkedin.com/in/mohammedadibkhan/) - MSc
+* Yue Guan - MSc
+* [Morteza Noferesti](https://www.linkedin.com/in/morteza-noferesti-a69862188/) - Postdoctoral Researcher
+* Kasra Darvishi - Research Associate
+* [Raghav Bhardwaj](https://www.linkedin.com/in/raghav-bhardwaj-878067153/) - Undergraduate researcher
+* Riley VanDonge - Undergraduate researcher
 
-#### Previous members
-
-* **Tom Wallace** - Former MSc thesis co-supervision at Brock University; thesis: *Optimizing Strategies for Enhancing Resource Efficiency in Transformers and Deep Learning Models*, co-supervised with Dr. Beatrice Ombuki-Berman (graduated).
-* [Amirmahdi Khosravi Tabrizi](https://www.linkedin.com/in/amirmahdi-khosravi/)
-* [Pranjal Chakraborty](https://pranjal.net/)
-* [Dipanzan Islam](https://www.linkedin.com/in/dipanzan-islam-583131178/)
-* [Mohammed Adib Khan](https://www.linkedin.com/in/mohammedadibkhan/)
+Plus dozens of additional undergraduate research students (3P99, co-op, and 4F90 projects) since 2019.
 
 ### Research publications
 
