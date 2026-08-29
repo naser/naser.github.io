@@ -290,4 +290,4 @@ Plus dozens of additional undergraduate research students (3P99, co-op, and 4F90
 
 ### Join the lab
 
-THREADS Lab is always looking for talented PhD, MSc, and undergraduate students. See the [Contact page]({{ site.baseurl }}/tabs/contact/) for what to include when you get in touch.
+THREADS Lab is always looking for talented PhD, MSc, and undergraduate students. See [Opportunities]({{ site.baseurl }}/tabs/opportunities/) for open positions and how to apply.

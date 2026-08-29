@@ -27,6 +27,7 @@ navbar-links:
   Home: "/"
   Research: "tabs/research"
   People: "tabs/people"
+  Opportunities: "tabs/opportunities"
   Teaching: "tabs/teaching"
 #   Bio: "tabs/bio"
   Contact: "tabs/contact"
