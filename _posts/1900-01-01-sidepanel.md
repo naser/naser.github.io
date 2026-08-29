@@ -6,7 +6,7 @@ sitemap: false
 canonical_url: "https://naser.github.io/"
 ---
 
-![Naser]({{ site.baseurl }}/assets/img/naser.png){: width="100%" :}
+![Naser Ezzati-Jivan]({{ site.baseurl }}/assets/img/naser-2026.jpg){: width="100%" :}
 
 **Naser Ezzati-Jivan**\
 *PhD (Polytechnique Montréal)*\
