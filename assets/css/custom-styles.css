@@ -74,32 +74,46 @@
   .team-grid { grid-template-columns: 1fr; }
 }
 
-/* ---- Principal investigator box: text left, small portrait right ---- */
+/* ---- Principal investigator box: text left, portrait right ---- */
 .pi-block {
   display: flex;
-  align-items: flex-start;
-  gap: 22px;
-  padding: 20px 22px;
+  align-items: stretch;
+  gap: 24px;
+  padding: 22px 24px;
   border: 1px solid #e1e4e8;
   border-radius: 10px;
   background: #fff;
   margin: 6px 0 30px;
 }
-.pi-text { flex: 1 1 auto; min-width: 0; }
+.pi-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .pi-text > p:first-child { margin-top: 0; }
 .pi-text > p:last-child { margin-bottom: 0; }
-.pi-photo { flex: 0 0 auto; width: 140px; }
+.pi-photo {
+  flex: 0 0 auto;
+  width: 168px;
+  display: flex;
+}
 .pi-photo img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: 50% 22%;
   display: block;
   border-radius: 8px;
   border: 1px solid #e1e4e8;
 }
 
 @media (max-width: 700px) {
-  .pi-block { flex-direction: column-reverse; gap: 16px; align-items: flex-start; }
-  .pi-photo { width: 130px; }
+  .pi-block { flex-direction: column-reverse; align-items: flex-start; gap: 16px; }
+  .pi-photo { width: 150px; }
+  .pi-photo img { height: auto; min-height: 0; }
 }
 
 /* Acronym expansion line: noticeably smaller than the default subheading */
