@@ -20,21 +20,20 @@ The lab brings together PhD and MSc students, undergraduate researchers, researc
 
 ### Our partners
 
-<div class="partner-grid" markdown="0">
-  <a class="partner-card" href="https://brocku.ca/" target="_blank" rel="noopener">
-    <span class="partner-name">Brock University</span>
-    <span class="partner-role">Host institution</span>
+<div class="partner-logos" markdown="0">
+  <a class="partner-logo" href="https://brocku.ca/" target="_blank" rel="noopener" title="Brock University — host institution">
+    <img src="{{ site.baseurl }}/assets/img/partners/brock.png" alt="Brock University">
   </a>
-  <a class="partner-card" href="https://www.nserc-crsng.gc.ca/" target="_blank" rel="noopener">
-    <span class="partner-name">NSERC</span>
-    <span class="partner-role">Discovery &amp; Dimensions funding</span>
+  <a class="partner-logo" href="https://www.nserc-crsng.gc.ca/" target="_blank" rel="noopener" title="NSERC — Discovery and Dimensions funding">
+    <img src="{{ site.baseurl }}/assets/img/partners/nserc.png" alt="NSERC / CRSNG">
   </a>
-  <a class="partner-card" href="https://www.mitacs.ca/" target="_blank" rel="noopener">
-    <span class="partner-name">Mitacs</span>
-    <span class="partner-role">Accelerate, BSI &amp; Globalink</span>
+  <a class="partner-logo" href="https://www.mitacs.ca/" target="_blank" rel="noopener" title="Mitacs — Accelerate, BSI and Globalink">
+    <img src="{{ site.baseurl }}/assets/img/partners/mitacs.png" alt="Mitacs">
   </a>
-  <a class="partner-card" href="https://www.ciena.com/" target="_blank" rel="noopener">
-    <span class="partner-name">Ciena</span>
-    <span class="partner-role">Industry partner</span>
+  <a class="partner-logo" href="https://www.ciena.com/" target="_blank" rel="noopener" title="Ciena — industry partner">
+    <img src="{{ site.baseurl }}/assets/img/partners/ciena.svg" alt="Ciena">
   </a>
+  <span class="partner-logo partner-logo-text" title="Interconnect Dynamics — industry partner">Interconnect&nbsp;Dynamics</span>
 </div>
+
+<p class="partner-note">We gratefully acknowledge the support of the Natural Sciences and Engineering Research Council of Canada (NSERC).<br><em lang="fr">Nous remercions le Conseil de recherches en sciences naturelles et en génie du Canada (CRSNG) de son soutien.</em></p>
