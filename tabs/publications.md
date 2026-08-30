@@ -23,6 +23,53 @@ For automated retrieval, start with the JSON catalog and its schema; use each pa
 - [Catalog discovery guide](https://naser.github.io/research-publications/llms.txt)
 - [ORCID](https://orcid.org/0000-0003-1435-6297) and [Google Scholar](https://scholar.google.ca/citations?hl=en&user=sJWcLv8AAAAJ&view_op=list_works&sortby=pubdate)
 
+### Browse by topic
+
+Every paper is tagged with controlled topics. Each topic page lists the papers in that area.
+
+<div class="topic-chips" markdown="0">
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/adaptive-scheduling.html">Adaptive Scheduling</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/anomaly-detection.html">Anomaly Detection</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/architecture-aware-methods.html">Architecture Aware Methods</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/benchmark-datasets.html">Benchmark Datasets</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/common-sense-reasoning.html">Common Sense Reasoning</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/deep-learning-systems.html">Deep Learning Systems</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/dependency-graphs.html">Dependency Graphs</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/energy-efficiency.html">Energy Efficiency</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/gradient-boosting.html">Gradient Boosting</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/graph-neural-networks.html">Graph Neural Networks</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/iot-security.html">IoT Security</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/kernel-tracing.html">Kernel Tracing</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/knowledge-graphs.html">Knowledge Graphs</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/latency-analysis.html">Latency Analysis</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/llm-assisted-analysis.html">LLM-Assisted Analysis</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/llm-efficiency.html">LLM Efficiency</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/llm-evaluation.html">LLM Evaluation</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/lttng.html">LTTng</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/machine-learning.html">Machine Learning</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/microservices.html">Microservices</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/model-compression.html">Model Compression</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/multicore-systems.html">Multicore Systems</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/multimodal-ai.html">Multimodal AI</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/observability.html">Observability</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/performance-analysis.html">Performance Analysis</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/performance-engineering.html">Performance Engineering</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/performance-modeling.html">Performance Modeling</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/performance-optimization.html">Performance Optimization</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/predictive-monitoring.html">Predictive Monitoring</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/resource-analysis.html">Resource Analysis</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/responsible-ai.html">Responsible AI</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/root-cause-analysis.html">Root-Cause Analysis</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/social-network-analysis.html">Social Network Analysis</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/system-tracing.html">System Tracing</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/trace-abstraction.html">Trace Abstraction</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/trace-analysis.html">Trace Analysis</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/trace-filtering.html">Trace Filtering</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/trace-reduction.html">Trace Reduction</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/trace-visualization.html">Trace Visualization</a>
+  <a class="topic-chip" href="https://naser.github.io/research-publications/topics/web-performance.html">Web Performance</a>
+</div>
+
 ### All publications
 
 <!-- BEGIN GENERATED PUBLICATIONS -->
