@@ -71,7 +71,9 @@
               <h2 class="{{ include.type }}-subheading">{{ page.subtitle | strip_html }}</h2>
             {% endif %}
           {% endif %}
-          {% if page.subtitle2 %}
+          {% if page.subtitle2_html %}
+            <span class="{{ include.type }}-subheading subheading-secondary">{{ page.subtitle2_html }}</span>
+          {% elsif page.subtitle2 %}
             <span class="{{ include.type }}-subheading subheading-secondary">{{ page.subtitle2 | strip_html }}</span>
           {% endif %}
 
