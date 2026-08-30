@@ -302,3 +302,80 @@ a.partner-logo img { cursor: pointer; }
   display: block;
   margin: 0 auto 14px;
 }
+
+/* ============ Visual refresh ============ */
+
+/* Navbar: dark band, teal hover underline */
+.navbar-custom {
+  box-shadow: 0 1px 0 rgba(255,255,255,.06), 0 2px 14px rgba(0,0,0,.18);
+}
+.navbar-custom .navbar-brand { color: #fff !important; font-weight: 700; letter-spacing: .02em; }
+.navbar-custom .nav-link {
+  position: relative;
+  transition: color .15s ease;
+}
+.navbar-custom .nav-link:hover { color: #fff !important; }
+.navbar-custom .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 12px; right: 12px; bottom: 4px;
+  height: 2px;
+  background: #7FB3BC;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .18s ease;
+}
+.navbar-custom .nav-link:hover::after { transform: scaleX(1); }
+.navbar-custom .navbar-toggler { border-color: rgba(255,255,255,.3); }
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Cpath stroke='%23D6DEE2' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Hero band: soft teal-tinted gradient with a rule underneath */
+.intro-header.no-img {
+  background: linear-gradient(180deg, #f2f7f7 0%, #ffffff 90%);
+  border-bottom: 1px solid #e1e4e8;
+}
+.intro-header .page-heading hr.small,
+.intro-header .post-heading hr.small {
+  border-color: #3A6A74;
+  border-width: 3px;
+  width: 56px;
+}
+
+/* Section headings: subtle teal kicker bar */
+.container-lg h3 {
+  position: relative;
+  padding-top: 12px;
+  margin-top: 34px;
+}
+.container-lg h3::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 34px; height: 3px;
+  border-radius: 2px;
+  background: #3A6A74;
+}
+/* but not inside cards, sidebars, or the PI box */
+.member-card h3::before, .pi-block h3::before, .sidepanel h3::before { display: none; }
+.sidepanel h3 { padding-top: 0; }
+
+/* Jump/index rows */
+.year-index {
+  font-size: 13px;
+  color: #5b6470;
+  background: #f4f7f8;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 10px 14px;
+  line-height: 1.9;
+}
+.year-index a { font-weight: 650; white-space: nowrap; }
+
+/* Footer polish */
+footer {
+  border-top: 3px solid #3A6A74;
+}
+footer .fa-stack-2x { color: #2a333c !important; }
+footer .fa-inverse { color: #D6DEE2 !important; }

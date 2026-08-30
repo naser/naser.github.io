@@ -45,6 +45,10 @@ Completed project:
 
 * **Canada Games software project** — a completed Niagara 2022 project described in the [official Brock News article](https://brocku.ca/brock-news/2022/05/canada-games-teaching-spotlight-computer-science-students-developing-canada-games-chatbot/).
 
+### How we work
+
+We are an empirical, systems-first group: claims are backed by measurements on real workloads, and methods are evaluated against production-scale traces wherever possible. Much of our work ships as open-source artifacts — several papers have accepted artifacts with persistent identifiers — and our [publication catalog]({{ site.baseurl }}/tabs/publications/) records the evidence level behind every summary. We collaborate closely with industry ([Ciena, Ericsson, and others]({{ site.baseurl }}/tabs/opportunities/)) so that research problems come from, and return to, systems that people actually run.
+
 ### Team
 
 THREADS Lab currently includes PhD and MSc students, undergraduate researchers, research assistants, and Mitacs Globalink interns. See the [People page]({{ site.baseurl }}/tabs/people/) for the full roster of current members and alumni.

@@ -145,16 +145,16 @@ keywords: "Naser Ezzati-Jivan, Brock University, software performance engineerin
 # footer-link-col: "#FFFF00"
 # footer-hover-col: "#FFFF00"
 
-navbar-col: "#FFFFFF"
-navbar-text-col: "#3A4552"
-navbar-border-col: "#E1E4E8"
+navbar-col: "#14181D"
+navbar-text-col: "#D6DEE2"
+navbar-border-col: "#14181D"
 page-col: "#FFFFFF"
 text-col: "#14181D"
 link-col: "#3A6A74"
 hover-col: "E8EEF0"
-footer-col: "#FFFFFF"
-footer-text-col: "#3A4552"
-footer-link-col: "#3A6A74"
+footer-col: "#14181D"
+footer-text-col: "#9FB0B5"
+footer-link-col: "#7FB3BC"
 footer-hover-col: "E8EEF0"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
@@ -286,11 +286,13 @@ defaults:
       layout: "post"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
+      share-img: "/assets/img/logo/social-card.png"
   -
     scope:
       path: "" # any file that's not a post will be a "page" layout by default
     values:
       layout: "page"
+      share-img: "/assets/img/logo/social-card.png"
 
 # Exclude these files from production site
 exclude:
