@@ -2,7 +2,7 @@
 layout: page
 title: Research
 share-title: Research | THREADS Lab (Naser Ezzati-Jivan)
-share-description: THREADS Lab's research in software observability, tracing, performance engineering, trustworthy and agentic AI systems, and dependable heterogeneous systems, with a structured publication catalog.
+share-description: THREADS Lab researches observability, tracing, performance engineering, trustworthy AI, and dependable heterogeneous systems.
 keywords: "software performance engineering, kernel tracing, system tracing, software debugging, observability, root-cause analysis, distributed systems, multicore systems, cloud computing, streaming data analysis, agentic AI, runtime governance, coding-agent auditing, adaptive tracing, research team, graduate students, PhD supervision, MSc supervision, research assistants"
 head-extra:
   - research-jsonld.html
@@ -12,20 +12,20 @@ THREADS Lab is the research group of Naser Ezzati-Jivan, Associate Professor in 
 
 We welcome inquiries from master's and PhD students, visiting researchers, postdoctoral fellows, and collaborators whose interests align with these areas. Please use the [Contact page]({{ site.baseurl }}/tabs/contact/) to get in touch.
 
-### Research directions
+## Research directions
 
 **A system can only be understood, trusted, or improved to the extent that its runtime behaviour can be observed as evidence** — so we build the tracing and analysis methods that turn what a system actually does at runtime into evidence you can reason about, whether that system is a distributed service, an AI agent, or a robot.
 
 Our work sits in three connected pillars. Current projects are listed under each; some pillars also include broader standing directions that are not tied to a single named project.
 
-#### 1. Software observability, tracing & performance engineering
+### 1. Software observability, tracing & performance engineering
 
 Adaptive, multilevel tracing and root-cause methods spanning application code down to kernel and hardware evidence, plus distributed, multicore, cloud, and virtualized systems more broadly.
 
 * **Multi-Level Adaptive Tracing for Enhancing Software Reliability and Performance** — Mitacs Business Strategy Internship (BSI), with Ciena Corporation. Naser Ezzati-Jivan, academic supervisor (PI).
 * **Observability Compensation Paradigm: Leveraging Adaptive Execution Tracing and Analysis** — NSERC Discovery Grant. Naser Ezzati-Jivan, PI.
 
-#### 2. Trustworthy & agentic AI systems
+### 2. Trustworthy & agentic AI systems
 
 Making AI-driven and agentic software systems observable, auditable, and fair, including EDI-by-design approaches to inclusive AI research practice.
 
@@ -34,7 +34,7 @@ Making AI-driven and agentic software systems observable, auditable, and fair, i
 * **Intelligent Software Agents for Autonomous Monitoring and Repair** — Mitacs Globalink Research Internship.
 * **Harnessing Large Language Models for Automated Software Log Understanding** — Mitacs Globalink Research Internship.
 
-#### 3. Heterogeneous execution & embodied/physical systems
+### 3. Heterogeneous execution & embodied/physical systems
 
 Extending observability beyond conventional software boundaries into heterogeneous hardware and the physical world; this pillar is the newest and most exploratory of the three.
 
@@ -45,15 +45,15 @@ Completed project:
 
 * **Canada Games software project** — a completed Niagara 2022 project described in the [official Brock News article](https://brocku.ca/brock-news/2022/05/canada-games-teaching-spotlight-computer-science-students-developing-canada-games-chatbot/).
 
-### How we work
+## How we work
 
 We are an empirical, systems-first group: claims are backed by measurements on real workloads, and methods are evaluated against production-scale traces wherever possible. Much of our work ships as open-source artifacts — several papers have accepted artifacts with persistent identifiers — and our [publication catalog]({{ site.baseurl }}/tabs/publications/) records the evidence level behind every summary. We collaborate closely with industry ([Ciena, Ericsson, and others]({{ site.baseurl }}/tabs/opportunities/)) so that research problems come from, and return to, systems that people actually run.
 
-### Team
+## Team
 
 THREADS Lab currently includes PhD and MSc students, undergraduate researchers, research assistants, and Mitacs Globalink interns. See the [People page]({{ site.baseurl }}/tabs/people/) for the full roster of current members and alumni.
 
-### Related publications
+## Related publications
 
 Explore our research publications and contributions to the field. The catalog provides technical summaries, identifiers, and citation formats for every paper.
 

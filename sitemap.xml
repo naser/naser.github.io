@@ -1,0 +1,23 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- assign sitemap_documents = site.pages | concat: site.posts -%}
+{%- for document in sitemap_documents -%}
+  {%- assign url_last_character = document.url | slice: -1, 1 -%}
+  {%- if url_last_character == '/' -%}
+  {%- unless document.sitemap == false or document.noindex == true or document.url == '/sitemap.xml' -%}
+  <url>
+    <loc>{{ document.url | absolute_url | strip_index | xml_escape }}</loc>
+    {%- if document.last-updated %}
+    <lastmod>{{ document.last-updated | date_to_xmlschema }}</lastmod>
+    {%- elsif document.date and document.collection == 'posts' %}
+    <lastmod>{{ document.date | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+  </url>
+  {%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}
+</urlset>

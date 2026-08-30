@@ -6,7 +6,7 @@ share-description: Contact THREADS Lab at Brock University about graduate and un
 keywords: "THREADS Lab, Naser Ezzati-Jivan, Brock University, prospective students, PhD positions, MSc positions, undergraduate research, research collaboration, graduate supervision"
 ---
 
-### Prospective students
+## Prospective students
 
 **We are always looking for talented PhD, MSc, and undergraduate students.**
 
@@ -22,11 +22,11 @@ Generic messages are easy to spot and rarely get a reply. A good message is shor
 
 Applicants to graduate programs must also apply formally through [Brock University graduate admissions](https://brocku.ca/graduate-studies/) — contacting us directly does not replace that application.
 
-### Collaboration and other inquiries
+## Collaboration and other inquiries
 
 We welcome inquiries from postdoctoral researchers, visiting researchers, industry partners, and academic collaborators working on aligned problems.
 
-### Contact details
+## Contact details
 
 **Naser Ezzati-Jivan**\
 Associate Professor, Department of Computer Science\

@@ -16,8 +16,8 @@ title: "THREADS Lab"
 author: Naser Ezzati-Jivan
 
 baseurl: ""
-url: "https://naser.github.io"
-description: "THREADS Lab is the research group of Naser Ezzati-Jivan, Associate Professor of Computer Science at Brock University, working on software observability, tracing, performance engineering, trustworthy and agentic AI systems, and dependable heterogeneous systems."
+url: "https://threadslab.org"
+description: "THREADS Lab at Brock University researches software observability, execution tracing, performance engineering, trustworthy AI, and dependable systems."
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -102,7 +102,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "naser.github.io"
+url-pretty: "threadslab.org"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 # excerpt_length: 999
@@ -307,8 +307,6 @@ exclude:
 
 plugins:
   - jekyll-paginate
-  - jekyll-sitemap
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
-

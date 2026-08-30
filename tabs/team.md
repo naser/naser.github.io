@@ -3,7 +3,7 @@ layout: page
 title: Team
 noindex: true
 sitemap: false
-canonical_url: "https://naser.github.io/tabs/people/"
+canonical_url: "https://threadslab.org/tabs/people/"
 share-title: Team | THREADS Lab
 share-description: The THREADS Lab team page has moved to the People page.
 ---

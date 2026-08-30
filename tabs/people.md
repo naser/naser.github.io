@@ -2,11 +2,11 @@
 layout: page
 title: People
 share-title: People | THREADS Lab (Naser Ezzati-Jivan)
-share-description: The people of THREADS Lab at Brock University — principal investigator, PhD and MSc students, undergraduate researchers, research assistants, interns, and alumni.
+share-description: Meet the THREADS Lab principal investigator, graduate and undergraduate researchers, research assistants, interns, and alumni at Brock University.
 keywords: "THREADS Lab team, Naser Ezzati-Jivan, Brock University, PhD students, MSc students, research assistants, Mitacs Globalink interns, research group members, alumni"
 ---
 
-### Principal Investigator
+## Principal Investigator
 
 <div class="pi-block" markdown="0">
   <div class="pi-text">
@@ -17,13 +17,13 @@ keywords: "THREADS Lab team, Naser Ezzati-Jivan, Brock University, PhD students,
     <p><a href="{{ site.baseurl }}/tabs/contact/">Contact</a> · <a href="https://brocku.ca/mathematics-science/computer-science/faculty-staff/naser-ezzati-jivan/">Brock faculty profile</a> · <a href="https://scholar.google.ca/citations?hl=en&amp;user=sJWcLv8AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Google Scholar</a> · <a href="https://orcid.org/0000-0003-1435-6297">ORCID</a> · <a href="https://www.linkedin.com/in/naser-ezzati-jivan-71418724">LinkedIn</a></p>
   </div>
   <div class="pi-photo">
-    <img src="{{ site.baseurl }}/assets/img/naser-2026.jpg" alt="Naser Ezzati-Jivan, Principal Investigator">
+    <img src="{{ site.baseurl }}/assets/img/naser-2026.jpg" alt="Naser Ezzati-Jivan, Principal Investigator" width="500" height="557">
   </div>
 </div>
 
-### Current members
+## Current members
 
-#### PhD students
+### PhD students
 
 <div class="team-grid" markdown="0">
   <div class="member-card">
@@ -56,7 +56,7 @@ keywords: "THREADS Lab team, Naser Ezzati-Jivan, Brock University, PhD students,
   </div>
 </div>
 
-#### MSc students
+### MSc students
 
 <div class="team-grid" markdown="0">
   <div class="member-card">
@@ -82,7 +82,7 @@ keywords: "THREADS Lab team, Naser Ezzati-Jivan, Brock University, PhD students,
   </div>
 </div>
 
-#### Undergraduate researchers
+### Undergraduate researchers
 
 <div class="team-grid" markdown="0">
   <div class="member-card">
@@ -101,7 +101,7 @@ keywords: "THREADS Lab team, Naser Ezzati-Jivan, Brock University, PhD students,
   </div>
 </div>
 
-#### Research Assistants
+### Research Assistants
 
 <div class="team-grid" markdown="0">
   <div class="member-card">
@@ -134,7 +134,7 @@ keywords: "THREADS Lab team, Naser Ezzati-Jivan, Brock University, PhD students,
   </div>
 </div>
 
-#### Mitacs Globalink research interns (2026)
+### Mitacs Globalink research interns (2026)
 
 <div class="team-grid" markdown="0">
   <div class="member-card">
@@ -160,7 +160,7 @@ keywords: "THREADS Lab team, Naser Ezzati-Jivan, Brock University, PhD students,
   </div>
 </div>
 
-### Alumni
+## Alumni
 
 Former graduate students, postdoctoral researchers, research associates, and undergraduate researchers. Roles reflect the position held while at THREADS Lab; paper authorship should be checked in the [publication catalog]({{ site.baseurl }}/research-publications/).
 
@@ -173,14 +173,14 @@ Former graduate students, postdoctoral researchers, research associates, and und
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/masoumeh.jpg" alt="Masoumeh Nourollahi"></div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/masoumeh.jpg" alt="Masoumeh Nourollahi" width="300" height="300"></div>
     <div class="member-body">
       <p class="member-name"><a href="https://www.linkedin.com/in/masoumeh-nourollahi-3ba5b536/">Masoumeh Nourollahi</a></p>
       <p class="member-role">PhD, Polytechnique Montréal<br>Co-supervised with Dr. Michel Dagenais</p>
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/tom.png" alt="Tom Wallace"></div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/tom.png" alt="Tom Wallace" width="300" height="300"></div>
     <div class="member-body">
       <p class="member-name">Tom Wallace</p>
       <p class="member-role">MSc · Co-supervised with Dr. Beatrice Ombuki-Berman</p>
@@ -201,49 +201,49 @@ Former graduate students, postdoctoral researchers, research associates, and und
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/ghazal.png" alt="Ghazal Khodabandeh"></div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/ghazal.png" alt="Ghazal Khodabandeh" width="300" height="300"></div>
     <div class="member-body">
       <p class="member-name"><a href="https://ghazalkhodabandeh.tilda.ws/">Ghazal Khodabandeh</a></p>
       <p class="member-role">MSc</p>
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/alireza.png" alt="Alireza Ezaz"></div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/alireza.png" alt="Alireza Ezaz" width="300" height="300"></div>
     <div class="member-body">
       <p class="member-name"><a href="https://www.linkedin.com/in/s-alireza-ezaz-93a0881b9/">Alireza Ezaz</a></p>
       <p class="member-role">MSc</p>
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/mehenika.jpg" alt="Mehenika Akter"></div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/mehenika.jpg" alt="Mehenika Akter" width="300" height="300"></div>
     <div class="member-body">
       <p class="member-name"><a href="https://www.linkedin.com/in/mehenika">Mehenika Akter</a></p>
       <p class="member-role">MSc</p>
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/pranjal.jpeg" alt="Pranjal Chakraborty"></div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/pranjal.jpeg" alt="Pranjal Chakraborty" width="300" height="300"></div>
     <div class="member-body">
       <p class="member-name"><a href="https://pranjal.net/">Pranjal Chakraborty</a></p>
       <p class="member-role">MSc</p>
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/dipanzan.jpg" alt="Dipanzan Islam"></div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/dipanzan.jpg" alt="Dipanzan Islam" width="300" height="300"></div>
     <div class="member-body">
       <p class="member-name"><a href="https://www.linkedin.com/in/dipanzan-islam-583131178/">Dipanzan Islam</a></p>
       <p class="member-role">MSc</p>
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/amir.jpg" alt="Amirmahdi Khosravi Tabrizi"></div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/amir.jpg" alt="Amirmahdi Khosravi Tabrizi" width="300" height="300"></div>
     <div class="member-body">
       <p class="member-name"><a href="https://www.linkedin.com/in/amirmahdi-khosravi/">Amirmahdi Khosravi Tabrizi</a></p>
       <p class="member-role">MSc</p>
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/adib.png" alt="Mohammed Adib Khan"></div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/adib.png" alt="Mohammed Adib Khan" width="300" height="300"></div>
     <div class="member-body">
       <p class="member-name"><a href="https://www.linkedin.com/in/mohammedadibkhan/">Mohammed Adib Khan</a></p>
       <p class="member-role">MSc</p>
@@ -278,7 +278,7 @@ Former graduate students, postdoctoral researchers, research associates, and und
     </div>
   </div>
   <div class="member-card is-alum">
-    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/riley.jpg" alt="Riley VanDonge"></div>
+    <div class="member-avatar has-photo"><img src="{{ site.baseurl }}/assets/img/people/riley.jpg" alt="Riley VanDonge" width="300" height="300"></div>
     <div class="member-body">
       <p class="member-name">Riley VanDonge</p>
       <p class="member-role">Undergraduate researcher</p>
@@ -288,6 +288,6 @@ Former graduate students, postdoctoral researchers, research associates, and und
 
 Plus dozens of additional undergraduate research students (3P99, co-op, and 4F90 projects) since 2019.
 
-### Join the lab
+## Join the lab
 
 THREADS Lab is always looking for talented PhD, MSc, and undergraduate students. See [Opportunities]({{ site.baseurl }}/tabs/opportunities/) for open positions and how to apply.

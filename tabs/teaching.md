@@ -2,13 +2,13 @@
 layout: page
 title: Teaching
 share-title: Teaching | THREADS Lab (Naser Ezzati-Jivan)
-share-description: Courses taught by Naser Ezzati-Jivan at Brock University, including software engineering, software testing and analysis, software performance engineering, databases, and computer systems.
+share-description: Courses taught by Naser Ezzati-Jivan at Brock University in software engineering, testing, performance, databases, and computer systems.
 keywords: "COSC 3P95, COSC 4P01, COSC 4P02, COSC 5P07, COSC 3P32, COSC 2P13, Brock University, software engineering, software testing, software performance engineering, databases, computer systems"
 ---
 
 Courses taught in the Department of Computer Science at Brock University. Term links go to the course page for that offering, where one is available. "Official outline" links to the department's current outline for the course, which may describe a different term than the offerings listed here.
 
-### Courses
+## Courses
 
 * **COSC 4P01 | Software Engineering 1**\
   Fall 2024,
@@ -66,7 +66,7 @@ Courses taught in the Department of Computer Science at Brock University. Term l
   development. This covers performance practices throughout the software development life cycle, performance and scalability
   testing and principles of performance evaluation including instrumentation, profiling, measurement, and benchmarking.
 
-### By academic year
+## By academic year
 
 | Year | Courses |
 | --- | --- |

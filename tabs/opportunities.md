@@ -2,7 +2,7 @@
 layout: page
 title: Opportunities
 share-title: Opportunities | THREADS Lab (Naser Ezzati-Jivan)
-share-description: Open positions and research opportunities at THREADS Lab, Brock University — postdoctoral, PhD, MSc, undergraduate (3P99 and 4F90), and international internships, plus industry collaboration.
+share-description: Explore postdoctoral, PhD, MSc, undergraduate, internship, and industry collaboration opportunities with THREADS Lab at Brock University.
 keywords: "PhD positions, MSc positions, postdoctoral positions, undergraduate research, COSC 3P99, COSC 4F90, Mitacs Globalink, international internships, industry collaboration, software observability, performance engineering, Brock University"
 ---
 
@@ -12,9 +12,9 @@ THREADS Lab is always looking for talented students and researchers who want to 
 
 **We are currently accepting PhD and MSc students.** Undergraduate project students, interns, and postdoctoral researchers are also welcome to get in touch.
 
-### For prospective students {#students}
+## For prospective students {#students}
 
-#### Postdoctoral researchers
+### Postdoctoral researchers
 
 Postdoctoral researchers lead a research direction, publish at top software-engineering venues, help supervise students, and often work directly with our industry partners.
 
@@ -22,13 +22,13 @@ Postdoctoral researchers lead a research direction, publish at top software-engi
 
 Positions depend on current funding. If your interests align, write with a short research statement and we will discuss options, including co-applying for external fellowships.
 
-#### PhD students
+### PhD students
 
 PhD students take on a multi-year research problem, publish at venues such as ICSE, FSE, ICPE, and ICSME, and typically contribute to an open-source artifact.
 
 *We look for:* an MSc in computer science, software engineering, or a related field; strong programming and systems skills; and the persistence to work on hard problems where the answer is not known in advance. Experience with Linux internals, tracing tools, distributed systems, or machine learning is an asset.
 
-#### MSc students
+### MSc students
 
 MSc students complete a thesis on a focused research question, usually producing a conference or journal paper.
 
@@ -36,15 +36,15 @@ MSc students complete a thesis on a focused research question, usually producing
 
 Applicants should also apply formally through [Brock University graduate admissions](https://brocku.ca/graduate-studies/); emailing us does not replace that application.
 
-### For undergraduate students {#undergrad}
+## For undergraduate students {#undergrad}
 
-#### COSC 3P99 — Undergraduate research project
+### COSC 3P99 — Undergraduate research project
 
 A one-term research project, usually a first taste of research: a focused implementation or measurement study connected to a lab project. Good preparation for a 4F90 thesis or graduate study.
 
 *We look for:* good academic standing, comfort with programming, and interest in systems, performance, or AI.
 
-#### COSC 4F90 — Undergraduate honours thesis
+### COSC 4F90 — Undergraduate honours thesis
 
 A full-year thesis project with a defined research question, evaluation, and written thesis. Several 4F90 students have gone on to graduate study in the lab, and some have co-authored publications.
 
@@ -52,13 +52,13 @@ A full-year thesis project with a defined research question, evaluation, and wri
 
 Brock also offers **co-op placements** and **NSERC Undergraduate Student Research Awards (USRA)**; ask if you would like to pursue either with the lab.
 
-### For international interns {#interns}
+## For international interns {#interns}
 
 The lab regularly hosts fully funded international interns through the [Mitacs Globalink Research Internship](https://www.mitacs.ca/our-programs/globalink-research-internship-students/) program, and welcomes visiting students and researchers funded through their own institutions or scholarships.
 
 Internships typically run three to four months and are scoped to produce something concrete: a working prototype, a measurement study, or a paper submission.
 
-### For industry {#industry}
+## For industry {#industry}
 
 THREADS Lab has a long record of applied, industry-partnered research. Our work has been carried out with partners including **Ciena**, **Ericsson**, and other Canadian technology companies and organizations, through programs such as **Mitacs Accelerate**, **Mitacs Business Strategy Internships**, **NSERC Alliance**, and **FedDev** projects.
 
@@ -73,7 +73,7 @@ Collaboration can take several forms: a funded intern or student embedded on a p
 
 If you have a system whose behaviour you cannot fully explain, that is usually a good place to start. [Get in touch]({{ site.baseurl }}/tabs/contact/).
 
-### How to apply {#apply}
+## How to apply {#apply}
 
 1. **Read first.** Look through the [research directions]({{ site.baseurl }}/tabs/research/) and a paper or two from the [publication catalog]({{ site.baseurl }}/research-publications/) to find what interests you.
 2. **Write a specific email.** Say who you are, which direction interests you and *why*, and what you would bring. Referring to a specific paper is the clearest way to show you have read our work.
@@ -83,7 +83,7 @@ If you have a system whose behaviour you cannot fully explain, that is usually a
 
 Generic mass emails are easy to recognise and rarely get a reply. See the [Contact page]({{ site.baseurl }}/tabs/contact/) for the full guidance on what to include.
 
-### Funding and support {#funding}
+## Funding and support {#funding}
 
 - **Research assistantships** on funded projects, including NSERC- and Mitacs-supported work.
 - **Teaching assistantships** through the Department of Computer Science.
@@ -91,7 +91,7 @@ Generic mass emails are easy to recognise and rarely get a reply. See the [Conta
 - **Conference travel** support for lab members presenting their work.
 - **Compute and tooling** for tracing, profiling, and LLM-based experiments.
 
-### Frequently asked questions {#faq}
+## Frequently asked questions {#faq}
 
 **Do I need prior research experience?**\
 No. Undergraduate projects exist precisely to give you that experience. For PhD applicants, prior research or publications help but are not strictly required.

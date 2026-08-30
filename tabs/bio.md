@@ -5,14 +5,14 @@ share-title: Bio | Naser Ezzati-Jivan (THREADS Lab)
 share-description: Academic background of Naser Ezzati-Jivan, Associate Professor of Computer Science at Brock University and principal investigator of THREADS Lab.
 ---
 
-### Current position
+## Current position
 
 * Associate Professor\
   2024 - Present\
   Department of Computer Science, Brock University\
   *Principal investigator, THREADS Lab*
 
-### Background
+## Background
 
 * Assistant Professor\
   2020 - 2024\

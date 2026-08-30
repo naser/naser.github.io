@@ -7,8 +7,8 @@ layout: null
 
 ## Canonical identity
 
-- Personal website: https://naser.github.io/
-- Research profile: https://naser.github.io/tabs/research/
+- Personal website: https://threadslab.org/
+- Research profile: https://threadslab.org/tabs/research/
 - Brock University profile: https://brocku.ca/mathematics-science/computer-science/faculty-staff/naser-ezzati-jivan/
 - ORCID: https://orcid.org/0000-0003-1435-6297
 - Google Scholar: https://scholar.google.com/citations?user=sJWcLv8AAAAJ
@@ -25,10 +25,10 @@ layout: null
 
 ## Publication catalog
 
-- Human-readable catalog: https://naser.github.io/research-publications/
-- Machine-readable catalog: https://naser.github.io/research-publications/catalog.json
-- Catalog schema: https://naser.github.io/research-publications/schemas/paper.schema.json
-- Catalog discovery guide: https://naser.github.io/research-publications/llms.txt
+- Human-readable catalog: https://threadslab.org/research-publications/
+- Machine-readable catalog: https://threadslab.org/research-publications/catalog.json
+- Catalog schema: https://threadslab.org/research-publications/schemas/paper.schema.json
+- Catalog discovery guide: https://threadslab.org/research-publications/llms.txt
 - Metadata repository: https://github.com/naser/research-publications
 
 ## Retrieval and citation instructions
