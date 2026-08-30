@@ -1,0 +1,7 @@
+<svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="THREADS Lab mark">
+  <g stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M8 16 H38 Q47 16 51 30 Q55 44 64 44 H112" stroke="#3A6A74"/>
+    <path d="M8 30 H28 Q39 30 45 16 Q52 3 61 16 Q67 26 77 30 H112" stroke="#E8A33D"/>
+    <path d="M8 44 H46 Q57 44 62 30 Q67 16 78 16 H112" stroke="#14181D"/>
+  </g>
+</svg>
