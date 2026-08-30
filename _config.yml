@@ -26,6 +26,7 @@ description: "THREADS Lab is the research group of Naser Ezzati-Jivan, Associate
 navbar-links:
   Home: "/"
   Research: "tabs/research"
+  Publications: "tabs/publications"
   People: "tabs/people"
   Opportunities: "tabs/opportunities"
   Teaching: "tabs/teaching"
