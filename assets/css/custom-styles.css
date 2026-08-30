@@ -275,3 +275,10 @@ a.partner-logo img { cursor: pointer; }
   background: #f2f6f7;
   text-decoration: none;
 }
+
+/* ---- Navbar: keep the last item off the screen edge ---- */
+@media (min-width: 1200px) {
+  .navbar-custom .navbar-nav {
+    margin-right: 40px;
+  }
+}
