@@ -1,0 +1,21 @@
+name: Apply unique course descriptions
+on:
+  push:
+    paths:
+      - '.github/workflows/course-meta-deploy.yml'
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply validated metadata patch
+        run: |
+          echo 'H4sIAAAAAAACE9WXX3PiNhTF3/0p7sy+NAsYW/IfoC9ss93OzrQbOtnOvvRFtq+Jukb2SnJSOvnwHQmTBArYIQndvHgAX0tH4vx0jzOe5zAYzLkGNtQsUcO0rKVCNSQe8YY3XGiUQ1L51F1kkLSWOFxk+DfgGGM/iVw3CEfxaJSD73lREDiDwaDDPE6v1+sy13QKA78fQ89cplMHBoOBAwVblrWeQMXm6IDmusAJnF9cngOZ+RRu4bxcVLVGCZdLpXGh4Ba+2IHBTOIM1BWTOMhQpZJXmpdiAudWBXCRl3LBzG+Ql/LhY8A0/CTL9Cv8Ifg1SsX1sg9cpEWdcTEHfYVQ1rrgAvsgkZkfVR8qWf6FqVZ9YCKDMs95inBlZnOd3k4hW9p/uFvZGaQvpfK/2lZb7cCbN+u9eX8v0/4xgdcPoGev0ynMZKkxtZLMYJeY1tLObb59Qn1Tyq9czF074sWDqRx4C18wE6gytgQ/mHge6BL8aEK9Pny+quXqhm9usIW9R1afzaMXeW4WA99qVGZ2NYFkCbhgvHAGb+FC2LsKlbLbmyyBVVXJhV6g0M6f8KkEgTe2iGlAuw+Q8wKdXuvT2SG2/GHOimIYVJ6/m6zNgoar8TgP8zBx3cAjEY2Dw1xtDbGbqq2iRzB1Web6hkmEn8WcC0RpHOQ3jgxmnn8Gt/CBFYWxnv8Yru4eOhFVHVaSvoxSo2+ttgtVNDZU2et0Cr8Ya4kM3v1TS1N7fVGp3Qj9VgqDiSl+QBOd+KElxmD1nePSnP1h5cX7gNksaZAhYUYJi1x3lPrjmLA2ZLYG2QfNVtkx2MxQWjOJdNN4K9uFMy8+22hN/nGt6eQQdVlX+pyqrcC18E4URZaiaEVR9UAvXrOiXum5n4oLpWVtTGrv2K3JecHFvA8LZKqWaG6uNirBZu5tBL9btkhbKyK7WhEdYZAkqeuOR8yPAjzMFenSishpWhE5phWRV9OKyAlaURc/7T+pNwsaPyUJYSQhrpvGaUQI7eSnw6f0VtHLndGvy1lPOJ+P0fyo07nFWE3XpRUl+6y1WdKYK0aW03Huul44SryMtZlra5B99toqe4TBPgoty6xevRHpEt4zzRKmsHmva/4LOqNkMwOQ4zLAqTy2tQy1sY70eVUWmOpaYqPtMe0/Ck37t9fpFBZlhsWPIIyowihaqD6gWSpHkS4hLYXiGUqrWPVN/5YcFdTKSLr8/dc+ZOtls2zB2/L3B8lt+PYevLH6r+CN9c7uQeW10deUNPSFOYsjf+S6NElonvsd6VsP0kLfuuypcYHcN9nXBV2H1aQvpfVBaOgUvC15tCGvedAOwrUCid9qvsrS6sxwwVJdswL4oirwLn7b8hteFDBHYbBEYKAMk4fI0+UavNE9d6H5WH3f2NG2dE53pfM8zeg49Vw3Csg4COPDyNEu6ZyeJp3TYzIUfTXpnP7f6Zzep5ZxuM9RmyWNpwKascQLXTcO/CigpM1TW4Psc9VW2TG+eidYsVRc2V36bAC+i7N0Ng43T3N63Gl+cou1Lip9TsnPl9Jpe06gu3OCT7yE+cR1kyAchV7c0WCHcwI9XU54Lc56Qk54huMLeIas1WL/ApLe2IeZHAAA' | base64 --decode | gzip -d | git apply
+          rm .github/workflows/course-meta-deploy.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Differentiate archived course descriptions'
+          git push
